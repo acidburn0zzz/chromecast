@@ -1067,7 +1067,8 @@
                 window.mediaPlayer = new cast.player.api.Player(window.mediaHost);
                 if (contentType == "livestream") {
                     console.error('####### Casting livestream');
-                    window.mediaPlayer.load(protocol, Number.POSITIVE_INFINITY);
+                    //window.mediaPlayer.load(protocol, Number.POSITIVE_INFINITY);
+                    window.mediaPlayer.load(protocol, initialTimeIndexSeconds);
                 }else {
                     console.error('####### Casting VOD');
                     window.mediaPlayer.load(protocol, initialTimeIndexSeconds);
