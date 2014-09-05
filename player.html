@@ -735,6 +735,20 @@
      */
     window.mediaManager.onError = function(obj) {
 
+        /*
+
+         MEDIA_ERR_ABORTED (1) User aborted video playback
+
+         MEDIA_ERR_NETWORK (2) Network error (could not read the stream)
+
+         MEDIA_ERR_DECODE (3) Decoding error, video is broken or the codec makes problems
+
+         MEDIA_ERR_SRC_NOT_SUPPORTED (4) The format is not supported
+
+        
+
+        */
+
         console.log("### Media Manager - error: " + obj);
         //setHudMessage('mediaManagerMessage', 'ERROR - ' + JSON.stringify(obj));
 
@@ -1025,8 +1039,8 @@
 
             */
             window.mediaHost.onError = function (errorCode) {
-                console.error('### HOST ERROR - Fatal Error: code = ' + errorCode);
-                setHudMessage('mediaHostState', 'Fatal Error: code = ' + errorCode);
+                console.log("### HOST ERROR - Fatal Error: code = " + errorCode);
+                //setHudMessage('mediaHostState', 'Fatal Error: code = ' + errorCode);
 
                 //var errorType = cast.player.api.ErrorCode(errorCode);
 
@@ -1066,11 +1080,11 @@
                 // mediaElement
                 window.mediaPlayer = new cast.player.api.Player(window.mediaHost);
                 if (contentType == "livestream") {
-                    console.error('####### Casting livestream');
+                    console.log('####### Casting livestream');
                     //window.mediaPlayer.load(protocol, Number.POSITIVE_INFINITY);
                     window.mediaPlayer.load(protocol, initialTimeIndexSeconds);
                 }else {
-                    console.error('####### Casting VOD');
+                    console.log('####### Casting VOD');
                     window.mediaPlayer.load(protocol, initialTimeIndexSeconds);
 
                 }
