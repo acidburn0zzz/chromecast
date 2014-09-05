@@ -57,17 +57,16 @@
 	</div>
     <div id="idle-box">
         <div id="idle-image">
-            <img src="http://media-cache-ec0.pinimg.com/236x/7f/75/6b/7f756bcb3481db56650768cc5fc0cf50.jpg" alt="">
+            <img src="" alt="">
         </div>
         <div id="idle-text">
-            <div id="idle-title">Weltmeister 2014 Deutschland</div>
-            <div id="idle-subtitle">Ein bisschen Text für den Untertitel</div>
-            <div id="idle-description">Ein bisschen Text für die Beschreibung. es wird etwas länger Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren
-                , no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</div>
-            <div id="idle-time">45 min</div>
+            <div id="idle-title"></div>
+            <div id="idle-subtitle"></div>
+            <div id="idle-description"></div>
+            <div id="idle-time"></div>
         </div>
         <div id="idle-info-sender">
-            <p>Sie können dieses Video von ihrem Gerät mit der BR Mediatheks App für iOS oder Android auswählen.<span>
+            <p>Sie können Videos von ihrem Gerät mit der BR Mediatheks App für iOS oder Android auswählen.<span>
                 <img src="assets/br-logo-blue-launch.png" alt="logo">
             </span></p>
         </div>
@@ -157,6 +156,8 @@
 
     sampleplayer.CastPlayer = function(element) {
 
+        sampleplayer.fetchJson_();
+
         this.element_ = element;
 
         this.isLivestream_;
@@ -192,15 +193,43 @@
         this.currentSliderIndex_ = 1;
 
 
-        var test = sampleplayer.fetchJson_();
+        //var test =
+
+
 
     };
 
     sampleplayer.fetchJson_ = function() {
+        //setTimeout(function() {
+
+        /*
+                    $.getJSON('http://www.br.de/system/halTocJson.jsp', function(json) {
+
+                        var tocURL = json.medcc.version["0"].href;
+                        console.log('TOC url:' + tocURL);
+
+                        $.getJSON(tocURL, function(json) {
+
+                            var startpageURL = json._links.home.href;
+
+                            console.log('Startpage url:' + startpageURL);
+
+                            $.getJSON(startpageURL, function(json) {
+
+                                var test = sampleplayer.parseJson_(json);
+                                window.player.player.startIdleSlider_();
+
+                            });
+
+                        });
+
+                    });
+ //               }(), 10000); // test to see what happens if the json takes 10 seconds to load
+*/
+
         $.getJSON('startpage.json', function(json) {
             //console.log(json);
             var test = sampleplayer.parseJson_(json);
-            //TODO: We should fetch the startpage every time receiver enters idle
         });
 
     };
@@ -226,7 +255,6 @@
             }
 
             var media = new Media(title, subtitle, description, tag, imageURLs);
-
             data.push(media);
         });
     };
@@ -270,9 +298,6 @@
         var self = this;
         clearTimeout(self.delay_);
 
-
-
-
         if (delay) {
             var func = function() { self.setState_(state, crossfade); };
             self.delay_ = setTimeout(func, delay);
@@ -296,28 +321,33 @@
     };
 
     sampleplayer.CastPlayer.prototype.startIdleSlider_ = function() {
-        this.idleSliderTimeout = setTimeout(function(){
-            var player = window.player;
-            $(player.idleBoxElement_).not('#idle-info-sender').fadeOut(800, function() {
-                var imageurl = data[player.currentSliderIndex_]['imageURL'];
-                var title = data[player.currentSliderIndex_]['title'];
-                var subtitle = data[player.currentSliderIndex_]['subtitle'];
-                var description = data[player.currentSliderIndex_]['description'];
-                var tag = data[player.currentSliderIndex_]['tag'];
+        if(data.length > 0) {
+            $("#idle-info-sender").html("<p>Sie können dieses Video von ihrem Gerät mit der BR Mediatheks App für " +
+                    "iOS oder Android auswählen.<span> <img src='assets/br-logo-blue-launch.png' alt='logo'> </span></p>");
+            this.idleSliderTimeout = setTimeout(function(){
+                var player = window.player;
+                $(player.idleBoxElement_).not('#idle-info-sender').fadeOut(800, function() {
+                    var imageurl = data[player.currentSliderIndex_]['imageURL'];
+                    var title = data[player.currentSliderIndex_]['title'];
+                    var subtitle = data[player.currentSliderIndex_]['subtitle'];
+                    var description = data[player.currentSliderIndex_]['description'];
+                    var tag = data[player.currentSliderIndex_]['tag'];
 
-                player.currentSliderIndex_ = ((player.currentSliderIndex_+1) % data.length);
+                    player.currentSliderIndex_ = ((player.currentSliderIndex_+1) % data.length);
 
-                $("#idle-title").html(title);
-                $("#idle-subtitle").html(subtitle);
-                $("#idle-description").html(description);
-                $("#idle-time").html(tag);
-                $("#idle-image img").attr('src', imageurl);
+                    $("#idle-title").html(title);
+                    $("#idle-subtitle").html(subtitle);
+                    $("#idle-description").html(description);
+                    $("#idle-time").html(tag);
+                    $("#idle-image img").attr('src', imageurl);
 
-                $(player.idleBoxElement_).fadeIn(800, function() {
-                    player.startIdleSlider_();
+                    $(player.idleBoxElement_).fadeIn(800, function() {
+                        player.startIdleSlider_();
+                    });
                 });
-            });
-        }, 5000); // should be 30 seconds
+            }, 5000);
+        }
+         // should be 30 seconds
         // after 30 seconds fadeOut Element (timeout speichern)
         // get next element from data array (currently prototype)
         // set attributes bei #idle-box
@@ -705,7 +735,7 @@
      */
     window.mediaManager.onError = function(obj) {
 
-        console.log("### Media Manager - error: " + JSON.stringify(obj));
+        console.log("### Media Manager - error: " + obj);
         //setHudMessage('mediaManagerMessage', 'ERROR - ' + JSON.stringify(obj));
 
         window.player.setState_(sampleplayer.State.DONE, true);
@@ -840,8 +870,8 @@
 
         if ((totalTime - seekTime) < 3.0) { event.data.currentTime = totalTime - 5.0}
 
-        console.log("TOTAL TIME OF THE VIDEO " + totalTime);
-        console.log("Skip to second " + seekTime);
+        //console.log("TOTAL TIME OF THE VIDEO " + totalTime);
+        //console.log("Skip to second " + seekTime);
 
 
         window.mediaManager['onSeekOrig'](event);
@@ -919,6 +949,8 @@
     window.mediaManager.onLoad = function(event) {
         console.log("### Media Manager - LOAD: " + JSON.stringify(event));
         setHudMessage('mediaManagerMessage', 'LOAD ' + JSON.stringify(event));
+
+        sampleplayer.fetchJson_();
 
         var self = window.player;
 
@@ -1264,7 +1296,7 @@
     });
 
     window.mediaElement.addEventListener('error', function(e){
-        console.log("######### MEDIA ELEMENT ERROR " + e);
+        console.log("######### MEDIA ELEMENT ERROR " + e.code);
         setHudMessage('mediaElementState','Error');
 
         window.player.setState_(sampleplayer.State.DONE, false);
