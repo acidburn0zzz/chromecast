@@ -1002,7 +1002,7 @@
 
             window.mediaHost = new cast.player.api.Host({
                 'mediaElement': window.mediaElement,
-                'url':  url //"/chromecast/teststream/master-failed.m3u8"
+                'url': "/chromecast/teststream2/fail2.m3u8" // url //"/chromecast/teststream/master-failed.m3u8"
             });
 
             //host.initialBandwidth = 3 * 1024 * 1024; // 3 MBPS   //Default is 2 MBPS
@@ -1297,7 +1297,7 @@
     });
 
     window.mediaElement.addEventListener('error', function(e){
-        console.log("######### MEDIA ELEMENT ERROR " + e.code);
+        console.log("######### MEDIA ELEMENT ERROR " + e.target.error.code);
         setHudMessage('mediaElementState','Error');
 
         window.player.setState_(sampleplayer.State.DONE, false);
