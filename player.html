@@ -220,7 +220,6 @@
                                 window.player.player.startIdleSlider_();
 
                             });
-
                         });
 
                     });
@@ -965,6 +964,10 @@
         setHudMessage('mediaManagerMessage', 'LOAD ' + JSON.stringify(event));
 
         sampleplayer.fetchJson_();
+
+        $.getJSON("startpage.json", function(json) {
+            sampleplayer.parseJson_(json);
+        });
 
         var self = window.player;
 

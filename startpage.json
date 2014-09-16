@@ -1,0 +1,1101 @@
+{
+"version": 1,
+"_links": {
+"self": {"href": "http://www.br.de/mediathek/video/mediathek-video-108~hal_vt-medcc1_-bff08c03fe069a9ee9013704adcbd4855992ad2a.json"},
+"html": {"href": "http://www.br.de/mediathek/video/index.html"},
+"ivwPixelUrl": {"href": "//bronline.ivwbox.de/cgi-bin/ivw/CP/sophora/brde/mediathek/video/indexPage-standard/mediathek-video-108_html;?k1=sophora&k2=mediathek&k3=video&k4=oz&k5=oz&k6=br-mediathek-json&k7=oz&k7a=oz&k8=indexPage-standard&k9=oz&k10=mediathek-video-108&k15=manual&k18=oz"},
+"comscorePixelUrl": {"href": "//de.sitestat.com/br/br/s?name=brde.mediathek.video.indexPage-standard.mediathek-video-108.page&ns_type=view&category=mediathek.video&k1=brde&k2=mediathek&k3=video&k4=oz&k5=oz&k6=br-mediathek-json&k7=oz&k7a=oz&k8=indexPage-standard&k9=oz&k10=mediathek-video-108&k15=manual&k18=oz"},
+"trackingPixelUrl": {"href": "http://www.br.de/doTrack/pixel.png?docId=mediathek-video-108&docExternalId=bec3d7df-b603-4c93-a60f-40bc7c216c4c&docPath=742b4918-0463-4767-af7c-927922135c50|c0dfdcca-57ec-428d-b99b-4577435ec15c|dfa74a70-3768-4d68-9cde-33d50c581d2e&docType=indexPage&contentType=standard&expires=12425727600000&cs=3d3d6898e093defb2487672228ed1e2c"}
+},
+"documentProperties": {
+"br-core:teaserText": "Fernsehen live im Netz sehen? Eine Sendung verpasst? In der Mediathek finden Sie alle Videos für das Bayerische Fernsehen und ARD-alpha.",
+"sophora:modificationDate": "2014-08-14T23:04:57+02:00",
+"br-core:webTime": "2013-04-17T15:24:12+02:00",
+"br-core:metaDescription": "Fernsehen live im Netz sehen? Eine Sendung verpasst? In der Mediathek finden Sie alle Videos für das Bayerische Fernsehen und BR-alpha.",
+"br-core:contentType": "standard",
+"br-core:retentionPeriod": "manual",
+"br-core:sponsoredResult": "mediathek video",
+"br-core:onlineSince": "2013-09-05T15:52:49+02:00",
+"sophora:id": "mediathek-video-108",
+"br-core:topline": "BR Mediathek Video",
+"br-core:retentionEndDate": "2363-10-04T09:00:00+02:00",
+"sophora:endDate": "2363-10-04T09:00:00+02:00",
+"jcr:primaryType": "br-core-nt:indexPage"
+},
+"_embedded": {"teasers": [
+{
+"_links": {
+"self": {"href": "http://www.br.de/mediathek/video/livestream/br-alpha/livestream-alpha-102~hal_vt-medcc1_-bff08c03fe069a9ee9013704adcbd4855992ad2a.json"},
+"html": {"href": "http://www.br.de/mediathek/video/livestream/br-alpha/livestream-alpha-102.html"},
+"boxIndexPage": {"href": "http://www.br.de/mediathek/video/livestreams-100~hal_vt-medcc1_-bff08c03fe069a9ee9013704adcbd4855992ad2a.json"},
+"broadcasts": {"href": "http://www.br.de/mediathek/video/livestream/br-alpha/livestream-alpha-102~hal_bs-a890f895-cdd3-4204-ba77-9161a218240c_vlt-nextBroadcasts_vt-medcc1_-88ec98bbc5b9d06c06fcf0ae6bdcc6c9875caaa8.json"}
+},
+"documentProperties": {
+"sophora:modificationDate": "2014-07-16T12:43:11+02:00",
+"br-core:webTime": "2014-06-17T08:32:24+02:00",
+"br-core:onlineSince": "2014-06-17T08:38:48+02:00",
+"sophora:id": "livestream-alpha-102",
+"jcr:primaryType": "br-core-nt:liveDashboard"
+},
+"teaserImage": {
+"_links": {
+"image108": {
+"width": 108,
+"height": 61,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/ard-alpha/sendungen/alpha-campus/alpha-campus-logo-100~_v-image108_-66c52eb681875eba5ba438be6ed7d3be2493bc95.jpg?version=27d1a"
+},
+"original": {
+"width": 1280,
+"height": 719,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/ard-alpha/sendungen/alpha-campus/alpha-campus-logo-100~_v-original_-4490982a09ce564896c0546e698c092a87185c1e.jpg?version=27d1a"
+},
+"image480q": {
+"width": 480,
+"height": 480,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/ard-alpha/sendungen/alpha-campus/alpha-campus-logo-100~_v-image480q_-86e76969c4c6eae737b1aecd7f2fc4c32e479f73.jpg?version=27d1a"
+},
+"image217h": {
+"width": 216,
+"height": 288,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/ard-alpha/sendungen/alpha-campus/alpha-campus-logo-100~_v-image217h_-6c26eb444667f0f1513b6415dad8d99038a8f1be.jpg?version=27d1a"
+},
+"image256q": {
+"width": 256,
+"height": 256,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/ard-alpha/sendungen/alpha-campus/alpha-campus-logo-100~_v-image256q_-b3c42639c67a6be7ffdb26e353b8478c1dcadb61.jpg?version=27d1a"
+},
+"image512": {
+"width": 512,
+"height": 288,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/ard-alpha/sendungen/alpha-campus/alpha-campus-logo-100~_v-image512_-6a0b0d9618fb94fd9ee05a84a1099a13ec9d3321.jpg?version=27d1a"
+},
+"image360h": {
+"width": 360,
+"height": 480,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/ard-alpha/sendungen/alpha-campus/alpha-campus-logo-100~_v-image360h_-ec2d8b4e42b653689c14a85ba776647dd3c70c56.jpg?version=27d1a"
+},
+"image256": {
+"width": 256,
+"height": 144,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/ard-alpha/sendungen/alpha-campus/alpha-campus-logo-100~_v-image256_-a42a29b6703dc477fd0848bc845b8be5c48c1667.jpg?version=27d1a"
+},
+"image256h": {
+"width": 256,
+"height": 341,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/ard-alpha/sendungen/alpha-campus/alpha-campus-logo-100~_v-image256h_-1f08f4ec4be92ccc06fdc72ba34a1cafc74be1d2.jpg?version=27d1a"
+},
+"image288q": {
+"width": 288,
+"height": 288,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/ard-alpha/sendungen/alpha-campus/alpha-campus-logo-100~_v-image288q_-b88847aebe67b5ffe13e44dad5d499444896bf7b.jpg?version=27d1a"
+},
+"image853": {
+"width": 854,
+"height": 480,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/ard-alpha/sendungen/alpha-campus/alpha-campus-logo-100~_v-image853_-7ce44e292721619ab1c1077f6f262a89f55266d7.jpg?version=27d1a"
+},
+"webmerlin320": {
+"width": 320,
+"height": 240,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/ard-alpha/sendungen/alpha-campus/alpha-campus-logo-100~_v-webmerlin320_-dfc202e262660dce3a68613ca3a12c17b320c95e.jpg?version=27d1a"
+}
+},
+"headline": "Campus",
+"altText": "alpha-Campus Logo | Bild: BR",
+"rights": "BR"
+},
+"boxTitle": "Livestream",
+"regionTitle": "",
+"geoProtected": true,
+"topline": "",
+"headline": "alpha-Campus DOKU",
+"channelTitle": "ARD-alpha",
+"broadcastStartDate": "2014-08-18T09:30:00+02:00",
+"broadcastEndDate": "2014-08-18T10:00:00+02:00",
+"teaserText": "Infos zur Sendereihe\n\nCampus macht Fernsehen für Studieninteressenten, Studierende, Lehrende und Forschende sowie für alle Menschen, die sich für die Hochschulszene interessieren. Campus schafft eine unabhängige Öffentlichkeit für die akademische Community."
+},
+{
+"_links": {
+"self": {"href": "http://www.br.de/mediathek/video/sendungen/bergauf-bergab/50-jahre-bayerisches-fernsehen-bergauf-bergab-102~hal_vt-medcc1_-bff08c03fe069a9ee9013704adcbd4855992ad2a.json"},
+"html": {"href": "http://www.br.de/mediathek/video/sendungen/bergauf-bergab/50-jahre-bayerisches-fernsehen-bergauf-bergab-102.html"},
+"boxIndexPage": {"href": "http://www.br.de/mediathek/video/suche/tag-suche-mediathek-100~hal_vt-medcc1_-bff08c03fe069a9ee9013704adcbd4855992ad2a.json?t=tags&q=Mediathek-Tagestipp"}
+},
+"documentProperties": {
+"sophora:modificationDate": "2014-08-17T21:50:48+02:00",
+"br-core:rights": "Bayerischer Rundfunk 2014",
+"br-core:geoProtected": false,
+"br-core:version": "2014-08-17T21:48:20.000+02:00",
+"br-core:duration": "00:28:37",
+"br-core:contentType": "standard",
+"br-core:channelId": "channel_28107",
+"br-core:premium": true,
+"br-core:topline": "Bergauf-Bergab",
+"br-core:retentionEndDate": "2015-08-17T21:48:20+02:00",
+"br-core:contributionTitle": "50 JAHRE BAYERISCHES FERNSEHEN: Bergauf-Bergab",
+"jcr:primaryType": "br-core-nt:video",
+"br-core:anamorph": true,
+"br-core:editorsChoice": true,
+"br-core:download": false,
+"br-core:webTime": "2014-08-17T21:48:20+02:00",
+"br-core:recordingId": "ce3269b6264611e4bca2984be109059a",
+"br-core:retentionPeriod": "av-retention1",
+"sophora:tags": "Mediathek-Tagestipp Untertitel",
+"br-core:onlineSince": "2014-08-17T21:48:28+02:00",
+"br-core:broadcastDate": "2014-08-17T21:15:00+02:00",
+"br-core:entireBroadcast": false,
+"sophora:id": "50-jahre-bayerisches-fernsehen-bergauf-bergab-102",
+"sophora:endDate": "2015-08-17T21:48:20+02:00"
+},
+"teaserImage": {
+"_links": {
+"image108": {
+"width": 108,
+"height": 61,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/bayerisches-fernsehen/programmkalender/broadcastimage33488~_v-image108_-66c52eb681875eba5ba438be6ed7d3be2493bc95.jpg?version=b4286"
+},
+"original": {
+"width": 1280,
+"height": 820,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/bayerisches-fernsehen/programmkalender/broadcastimage33488~_v-original_-4490982a09ce564896c0546e698c092a87185c1e.jpg?version=b4286"
+},
+"image480q": {
+"width": 480,
+"height": 480,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/bayerisches-fernsehen/programmkalender/broadcastimage33488~_v-image480q_-86e76969c4c6eae737b1aecd7f2fc4c32e479f73.jpg?version=b4286"
+},
+"image217h": {
+"width": 216,
+"height": 288,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/bayerisches-fernsehen/programmkalender/broadcastimage33488~_v-image217h_-6c26eb444667f0f1513b6415dad8d99038a8f1be.jpg?version=b4286"
+},
+"image256q": {
+"width": 256,
+"height": 256,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/bayerisches-fernsehen/programmkalender/broadcastimage33488~_v-image256q_-b3c42639c67a6be7ffdb26e353b8478c1dcadb61.jpg?version=b4286"
+},
+"image512": {
+"width": 512,
+"height": 288,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/bayerisches-fernsehen/programmkalender/broadcastimage33488~_v-image512_-6a0b0d9618fb94fd9ee05a84a1099a13ec9d3321.jpg?version=b4286"
+},
+"image360h": {
+"width": 360,
+"height": 480,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/bayerisches-fernsehen/programmkalender/broadcastimage33488~_v-image360h_-ec2d8b4e42b653689c14a85ba776647dd3c70c56.jpg?version=b4286"
+},
+"image256": {
+"width": 256,
+"height": 144,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/bayerisches-fernsehen/programmkalender/broadcastimage33488~_v-image256_-a42a29b6703dc477fd0848bc845b8be5c48c1667.jpg?version=b4286"
+},
+"image256h": {
+"width": 256,
+"height": 341,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/bayerisches-fernsehen/programmkalender/broadcastimage33488~_v-image256h_-1f08f4ec4be92ccc06fdc72ba34a1cafc74be1d2.jpg?version=b4286"
+},
+"image288q": {
+"width": 288,
+"height": 288,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/bayerisches-fernsehen/programmkalender/broadcastimage33488~_v-image288q_-b88847aebe67b5ffe13e44dad5d499444896bf7b.jpg?version=b4286"
+},
+"image853": {
+"width": 854,
+"height": 480,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/bayerisches-fernsehen/programmkalender/broadcastimage33488~_v-image853_-7ce44e292721619ab1c1077f6f262a89f55266d7.jpg?version=b4286"
+},
+"webmerlin320": {
+"width": 320,
+"height": 240,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/bayerisches-fernsehen/programmkalender/broadcastimage33488~_v-webmerlin320_-dfc202e262660dce3a68613ca3a12c17b320c95e.jpg?version=b4286"
+}
+},
+"headline": "Bergauf-Bergab",
+"altText": "Moderator Michael Pause. | Bild: Honorarfrei lediglich für Ankündigungen und Veröffentlichungen im Zusammenhang mit obiger BR-Sendung bei Nennung: \"Bild: BR\". Andere Verwendungen nur nach entsprechender vorheriger schriftlicher Vereinbarung mit dem BR-Bildarchiv, Tel. 089 / 5900 10580, Fax: 089 / 5900 10585, Mail: Pressestelle.Foto@br.de",
+"rights": "Honorarfrei lediglich für Ankündigungen und Veröffentlichungen im Zusammenhang mit obiger BR-Sendung bei Nennung: \"Bild: BR\". Andere Verwendungen nur nach entsprechender vorheriger schriftlicher Vereinbarung mit dem BR-Bildarchiv, Tel. 089 / 5900 10580, Fax: 089 / 5900 10585, Mail: Pressestelle.Foto@br.de"
+},
+"headline": "Das Magazin für Bergsteiger",
+"topline": "Bergauf-Bergab",
+"boxTitle": "Tipp der Redaktion",
+"teaserText": "Unser Profil\n\nEine Bergsendung, die mit dem \"Erlebnis Berg\" nicht nur den Spezialisten, sondern ein breites Publikum erreicht - dieser Grundgedanke von \"Bergauf-Bergab\" hat sich mehr als 25 Jahre erfolgreich bewährt und soll auch in Zukunft unser Programm prägen.",
+"channelTitle": "Bayerisches Fernsehen"
+},
+{
+"_links": {
+"self": {"href": "http://www.br.de/mediathek/video/sendungen/alpha-forum/alpha-forum-496~hal_vt-medcc1_-bff08c03fe069a9ee9013704adcbd4855992ad2a.json"},
+"html": {"href": "http://www.br.de/mediathek/video/sendungen/alpha-forum/alpha-forum-496.html"},
+"boxIndexPage": {"href": "http://www.br.de/mediathek/video/suche/tag-suche-mediathek-100~hal_vt-medcc1_-bff08c03fe069a9ee9013704adcbd4855992ad2a.json?t=tags&q=Mediathek-Tagestipp"}
+},
+"documentProperties": {
+"sophora:modificationDate": "2014-08-17T00:29:42+02:00",
+"br-core:rights": "Bayerischer Rundfunk 2014",
+"br-core:geoProtected": false,
+"br-core:version": "2014-08-17T00:24:31.000+02:00",
+"br-core:duration": "00:44:13",
+"br-core:contentType": "standard",
+"br-core:channelId": "channel_28487",
+"br-core:premium": true,
+"br-core:topline": "alpha-Forum",
+"br-core:contributionTitle": "alpha-Forum",
+"br-core:anamorph": true,
+"jcr:primaryType": "br-core-nt:video",
+"br-core:editorsChoice": true,
+"br-core:download": false,
+"br-core:webTime": "2014-08-17T00:24:30+02:00",
+"br-core:recordingId": "5298af30259311e4bca2984be109059a",
+"br-core:retentionPeriod": "retention6",
+"sophora:tags": "Mediathek-Tagestipp",
+"br-core:onlineSince": "2014-08-17T00:24:38+02:00",
+"br-core:broadcastDate": "2014-08-16T23:35:00+02:00",
+"br-core:entireBroadcast": false,
+"sophora:id": "alpha-forum-496"
+},
+"teaserImage": {
+"_links": {
+"image108": {
+"width": 108,
+"height": 61,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/nachrichten/scholl-latour-gestorben-100~_v-image108_-66c52eb681875eba5ba438be6ed7d3be2493bc95.jpg?version=066d9"
+},
+"original": {
+"width": 1280,
+"height": 720,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/nachrichten/scholl-latour-gestorben-100~_v-original_-4490982a09ce564896c0546e698c092a87185c1e.jpg?version=066d9"
+},
+"image480q": {
+"width": 480,
+"height": 480,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/nachrichten/scholl-latour-gestorben-100~_v-image480q_-86e76969c4c6eae737b1aecd7f2fc4c32e479f73.jpg?version=066d9"
+},
+"image217h": {
+"width": 216,
+"height": 288,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/nachrichten/scholl-latour-gestorben-100~_v-image217h_-6c26eb444667f0f1513b6415dad8d99038a8f1be.jpg?version=066d9"
+},
+"image256q": {
+"width": 256,
+"height": 256,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/nachrichten/scholl-latour-gestorben-100~_v-image256q_-b3c42639c67a6be7ffdb26e353b8478c1dcadb61.jpg?version=066d9"
+},
+"image512": {
+"width": 512,
+"height": 288,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/nachrichten/scholl-latour-gestorben-100~_v-image512_-6a0b0d9618fb94fd9ee05a84a1099a13ec9d3321.jpg?version=066d9"
+},
+"image360h": {
+"width": 360,
+"height": 480,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/nachrichten/scholl-latour-gestorben-100~_v-image360h_-ec2d8b4e42b653689c14a85ba776647dd3c70c56.jpg?version=066d9"
+},
+"image256": {
+"width": 256,
+"height": 144,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/nachrichten/scholl-latour-gestorben-100~_v-image256_-a42a29b6703dc477fd0848bc845b8be5c48c1667.jpg?version=066d9"
+},
+"image256h": {
+"width": 256,
+"height": 341,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/nachrichten/scholl-latour-gestorben-100~_v-image256h_-1f08f4ec4be92ccc06fdc72ba34a1cafc74be1d2.jpg?version=066d9"
+},
+"image288q": {
+"width": 288,
+"height": 288,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/nachrichten/scholl-latour-gestorben-100~_v-image288q_-b88847aebe67b5ffe13e44dad5d499444896bf7b.jpg?version=066d9"
+},
+"image853": {
+"width": 854,
+"height": 480,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/nachrichten/scholl-latour-gestorben-100~_v-image853_-7ce44e292721619ab1c1077f6f262a89f55266d7.jpg?version=066d9"
+},
+"webmerlin320": {
+"width": 320,
+"height": 240,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/nachrichten/scholl-latour-gestorben-100~_v-webmerlin320_-dfc202e262660dce3a68613ca3a12c17b320c95e.jpg?version=066d9"
+}
+},
+"headline": "Peter Scholl-Latour",
+"altText": "Peter Scholl-Latour | Bild: picture-alliance/dpa",
+"rights": "picture-alliance/dpa"
+},
+"headline": "Peter Scholl-Latour",
+"topline": "alpha-Forum",
+"boxTitle": "Tipp der Redaktion",
+"teaserText": "Im alpha-Forum kommen Persönlichkeiten aus Politik und Wirtschaft, Wissenschaft und Gesellschaft, Religion und Kultur in 45 Minuten ausführlich zu Wort.\n\nIn hintergründigen Zwiegesprächen entstehen Porträts der Interviewten, in denen genügend Zeit für Details und Nuancen bleibt. Nicht das kurze, mediengerechte Zitat, sondern der Lebensweg des Gesprächspartners mit all seinen Erfolgen und Rückschlägen steht im Mittelpunkt von alpha-Forum.",
+"channelTitle": "ARD-alpha"
+},
+{
+"_links": {
+"self": {"href": "http://www.br.de/mediathek/video/sendungen/kunstraum/kunstraum-234~hal_vt-medcc1_-bff08c03fe069a9ee9013704adcbd4855992ad2a.json"},
+"html": {"href": "http://www.br.de/mediathek/video/sendungen/kunstraum/kunstraum-234.html"},
+"boxIndexPage": {"href": "http://www.br.de/mediathek/video/suche/tag-suche-mediathek-100~hal_vt-medcc1_-bff08c03fe069a9ee9013704adcbd4855992ad2a.json?t=tags&q=Mediathek-Tagestipp"}
+},
+"documentProperties": {
+"sophora:modificationDate": "2014-08-17T13:05:51+02:00",
+"br-core:rights": "Bayerischer Rundfunk 2014",
+"br-core:geoProtected": true,
+"br-core:version": "2014-08-17T13:03:50.000+02:00",
+"br-core:duration": "00:14:51",
+"br-core:contentType": "standard",
+"br-core:channelId": "channel_28487",
+"br-core:premium": true,
+"br-core:topline": "Kunstraum",
+"br-core:retentionEndDate": "2015-08-17T13:03:50+02:00",
+"br-core:contributionTitle": "Kunstraum",
+"jcr:primaryType": "br-core-nt:video",
+"br-core:anamorph": true,
+"br-core:editorsChoice": true,
+"br-core:download": false,
+"br-core:webTime": "2014-08-17T13:03:50+02:00",
+"br-core:recordingId": "a1de1dfe25fd11e4bca2984be109059a",
+"br-core:retentionPeriod": "av-retention1",
+"sophora:tags": "Mediathek-Tagestipp",
+"br-core:onlineSince": "2014-08-17T13:03:58+02:00",
+"br-core:broadcastDate": "2014-08-17T12:45:00+02:00",
+"br-core:entireBroadcast": false,
+"sophora:id": "kunstraum-234",
+"sophora:endDate": "2015-08-17T13:03:50+02:00"
+},
+"teaserImage": {
+"_links": {
+"image108": {
+"width": 108,
+"height": 61,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/ard-alpha/sendungen/kunstraum/fridhelm-klein-tageszeichnungen-104~_v-image108_-66c52eb681875eba5ba438be6ed7d3be2493bc95.jpg?version=cd141"
+},
+"original": {
+"width": 1280,
+"height": 720,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/ard-alpha/sendungen/kunstraum/fridhelm-klein-tageszeichnungen-104~_v-original_-4490982a09ce564896c0546e698c092a87185c1e.jpg?version=cd141"
+},
+"image480q": {
+"width": 480,
+"height": 480,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/ard-alpha/sendungen/kunstraum/fridhelm-klein-tageszeichnungen-104~_v-image480q_-86e76969c4c6eae737b1aecd7f2fc4c32e479f73.jpg?version=cd141"
+},
+"image217h": {
+"width": 216,
+"height": 288,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/ard-alpha/sendungen/kunstraum/fridhelm-klein-tageszeichnungen-104~_v-image217h_-6c26eb444667f0f1513b6415dad8d99038a8f1be.jpg?version=cd141"
+},
+"image256q": {
+"width": 256,
+"height": 256,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/ard-alpha/sendungen/kunstraum/fridhelm-klein-tageszeichnungen-104~_v-image256q_-b3c42639c67a6be7ffdb26e353b8478c1dcadb61.jpg?version=cd141"
+},
+"image512": {
+"width": 512,
+"height": 288,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/ard-alpha/sendungen/kunstraum/fridhelm-klein-tageszeichnungen-104~_v-image512_-6a0b0d9618fb94fd9ee05a84a1099a13ec9d3321.jpg?version=cd141"
+},
+"background": {
+"width": 1920,
+"height": 1080,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/ard-alpha/sendungen/kunstraum/fridhelm-klein-tageszeichnungen-104~_v-background_-681ed4eae96bef429da07bf82d1506abe03cf9e3.jpg?version=cd141"
+},
+"image360h": {
+"width": 360,
+"height": 480,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/ard-alpha/sendungen/kunstraum/fridhelm-klein-tageszeichnungen-104~_v-image360h_-ec2d8b4e42b653689c14a85ba776647dd3c70c56.jpg?version=cd141"
+},
+"image256": {
+"width": 256,
+"height": 144,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/ard-alpha/sendungen/kunstraum/fridhelm-klein-tageszeichnungen-104~_v-image256_-a42a29b6703dc477fd0848bc845b8be5c48c1667.jpg?version=cd141"
+},
+"image256h": {
+"width": 256,
+"height": 341,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/ard-alpha/sendungen/kunstraum/fridhelm-klein-tageszeichnungen-104~_v-image256h_-1f08f4ec4be92ccc06fdc72ba34a1cafc74be1d2.jpg?version=cd141"
+},
+"image288q": {
+"width": 288,
+"height": 288,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/ard-alpha/sendungen/kunstraum/fridhelm-klein-tageszeichnungen-104~_v-image288q_-b88847aebe67b5ffe13e44dad5d499444896bf7b.jpg?version=cd141"
+},
+"image853": {
+"width": 854,
+"height": 480,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/ard-alpha/sendungen/kunstraum/fridhelm-klein-tageszeichnungen-104~_v-image853_-7ce44e292721619ab1c1077f6f262a89f55266d7.jpg?version=cd141"
+},
+"webmerlin320": {
+"width": 320,
+"height": 240,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/ard-alpha/sendungen/kunstraum/fridhelm-klein-tageszeichnungen-104~_v-webmerlin320_-dfc202e262660dce3a68613ca3a12c17b320c95e.jpg?version=cd141"
+}
+},
+"headline": "Fridhelm Klein \"Tageszeichnungen\"",
+"altText": "Fridhelm Klein \"Tageszeichnungen\" | Bild: BR",
+"rights": "BR"
+},
+"headline": "Fridhelm Klein: \"Tageszeichnungen\"",
+"topline": "Kunstraum",
+"boxTitle": "Tipp der Redaktion",
+"teaserText": "Von der Idee zum Kunstwerk ist es nicht immer ein leichter Weg - Kunstraum macht diesen Weg transparenter. Die Sendereihe vermittelt die Visionen, Emotionen und Gedanken von Künstlern.",
+"channelTitle": "ARD-alpha"
+},
+{
+"_links": {
+"self": {"href": "http://www.br.de/mediathek/video/sendungen/dahoam-is-dahoam/1363-did-100~hal_vt-medcc1_-bff08c03fe069a9ee9013704adcbd4855992ad2a.json"},
+"html": {"href": "http://www.br.de/mediathek/video/sendungen/dahoam-is-dahoam/1363-did-100.html"},
+"boxIndexPage": {"href": "http://www.br.de/mediathek/video/suche/tag-suche-mediathek-100~hal_vt-medcc1_-bff08c03fe069a9ee9013704adcbd4855992ad2a.json?t=social&q=mostViewed"}
+},
+"documentProperties": {
+"br-core:teaserText": "Trotz Monis Verbot will Kathi ihren 17. Geburtstag feiern. Schafft sie es, in der Kürze der Zeit noch eine Party zu organisieren?",
+"sophora:modificationDate": "2014-08-13T20:21:28+02:00",
+"br-core:rights": "© Bayerischer Rundfunk",
+"br-core:geoProtected": false,
+"br-core:version": "2014-08-11T14:35:33.000+02:00",
+"br-core:onDemand": false,
+"br-core:duration": "00:28:48",
+"br-core:contentType": "podcast",
+"br-core:channelId": "channel_28107",
+"br-core:premium": false,
+"br-core:topline": "Dahoam is Dahoam",
+"br-core:retentionEndDate": "2014-08-23T09:30:00+02:00",
+"br-core:contributionTitle": "DiD-Folge 1363: Ausser (St)Rand und Band",
+"jcr:primaryType": "br-core-nt:video",
+"br-core:anamorph": true,
+"br-core:editorsChoice": false,
+"br-core:download": true,
+"br-core:webTime": "2014-08-13T20:15:00+02:00",
+"br-core:retentionPeriod": "manual",
+"sophora:tags": "1363-did Untertitel",
+"br-core:author": "Dahoam is Dahoam",
+"br-core:onlineSince": "2014-08-13T20:21:28+02:00",
+"br-core:broadcastDate": "2014-08-13T19:45:00+02:00",
+"br-core:teaserShortHeadline": "DiD: Folge 1363",
+"br-core:entireBroadcast": true,
+"sophora:id": "1363-did-100",
+"br-core:allowComments": false,
+"sophora:endDate": "2014-08-23T09:30:00+02:00"
+},
+"teaserImage": {
+"_links": {
+"image108": {
+"width": 108,
+"height": 61,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/bayerisches-fernsehen/sendungen/dahoam-is-dahoam/1632-did-teaser-100~_v-image108_-66c52eb681875eba5ba438be6ed7d3be2493bc95.jpg?version=22fb1"
+},
+"original": {
+"width": 1280,
+"height": 863,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/bayerisches-fernsehen/sendungen/dahoam-is-dahoam/1632-did-teaser-100~_v-original_-4490982a09ce564896c0546e698c092a87185c1e.jpg?version=22fb1"
+},
+"image480q": {
+"width": 480,
+"height": 480,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/bayerisches-fernsehen/sendungen/dahoam-is-dahoam/1632-did-teaser-100~_v-image480q_-86e76969c4c6eae737b1aecd7f2fc4c32e479f73.jpg?version=22fb1"
+},
+"image217h": {
+"width": 216,
+"height": 288,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/bayerisches-fernsehen/sendungen/dahoam-is-dahoam/1632-did-teaser-100~_v-image217h_-6c26eb444667f0f1513b6415dad8d99038a8f1be.jpg?version=22fb1"
+},
+"image256q": {
+"width": 256,
+"height": 256,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/bayerisches-fernsehen/sendungen/dahoam-is-dahoam/1632-did-teaser-100~_v-image256q_-b3c42639c67a6be7ffdb26e353b8478c1dcadb61.jpg?version=22fb1"
+},
+"image512": {
+"width": 512,
+"height": 288,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/bayerisches-fernsehen/sendungen/dahoam-is-dahoam/1632-did-teaser-100~_v-image512_-6a0b0d9618fb94fd9ee05a84a1099a13ec9d3321.jpg?version=22fb1"
+},
+"image360h": {
+"width": 360,
+"height": 480,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/bayerisches-fernsehen/sendungen/dahoam-is-dahoam/1632-did-teaser-100~_v-image360h_-ec2d8b4e42b653689c14a85ba776647dd3c70c56.jpg?version=22fb1"
+},
+"image256": {
+"width": 256,
+"height": 144,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/bayerisches-fernsehen/sendungen/dahoam-is-dahoam/1632-did-teaser-100~_v-image256_-a42a29b6703dc477fd0848bc845b8be5c48c1667.jpg?version=22fb1"
+},
+"image256h": {
+"width": 256,
+"height": 341,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/bayerisches-fernsehen/sendungen/dahoam-is-dahoam/1632-did-teaser-100~_v-image256h_-1f08f4ec4be92ccc06fdc72ba34a1cafc74be1d2.jpg?version=22fb1"
+},
+"image288q": {
+"width": 288,
+"height": 288,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/bayerisches-fernsehen/sendungen/dahoam-is-dahoam/1632-did-teaser-100~_v-image288q_-b88847aebe67b5ffe13e44dad5d499444896bf7b.jpg?version=22fb1"
+},
+"image853": {
+"width": 854,
+"height": 480,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/bayerisches-fernsehen/sendungen/dahoam-is-dahoam/1632-did-teaser-100~_v-image853_-7ce44e292721619ab1c1077f6f262a89f55266d7.jpg?version=22fb1"
+},
+"webmerlin320": {
+"width": 320,
+"height": 240,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/bayerisches-fernsehen/sendungen/dahoam-is-dahoam/1632-did-teaser-100~_v-webmerlin320_-dfc202e262660dce3a68613ca3a12c17b320c95e.jpg?version=22fb1"
+}
+},
+"headline": "Folge 1363: Ausser (St)Rand und Band",
+"altText": "Trotz Monis Verbot will Kathi ihren 17. Geburtstag in der Waldhütte feiern. Von links: Katharina Benninger (Carina Dengler) und Patrick Westenrieder (Lucas Bauer). | Bild: BR/Marco Orlando Pichler",
+"rights": "BR/Marco Orlando Pichler"
+},
+"headline": "Folge 1363 - Ausser (St)Rand und Band",
+"topline": "Dahoam is Dahoam",
+"boxTitle": "meistgesehen",
+"teaserText": "Trotz Monis Verbot will Kathi ihren 17. Geburtstag feiern. Schafft sie es, in der Kürze der Zeit noch eine Party zu organisieren?",
+"channelTitle": "Bayerisches Fernsehen"
+},
+{
+"_links": {
+"self": {"href": "http://www.br.de/mediathek/video/sendungen/lebenslinien/lebenslinien-liz-fraenksicher-wirbelwind-102~hal_vt-medcc1_-bff08c03fe069a9ee9013704adcbd4855992ad2a.json"},
+"html": {"href": "http://www.br.de/mediathek/video/sendungen/lebenslinien/lebenslinien-liz-fraenksicher-wirbelwind-102.html"},
+"boxIndexPage": {"href": "http://www.br.de/mediathek/video/suche/tag-suche-mediathek-100~hal_vt-medcc1_-bff08c03fe069a9ee9013704adcbd4855992ad2a.json?t=social&q=bestRated"}
+},
+"documentProperties": {
+"br-core:teaserText": "Im ländlichen Oberfranken ist es 1950 noch eine Schande, wie Liz als uneheliches Kind zur Welt zu kommen. In der Schule entdeckt ihre Lehrerin Liz' außergewöhnliches Rhythmusgefühl. Die Außenseiterin darf als Schlagzeugschülerin ans Konservatorium. Am Schlagzeug und besonders an der Marimba kann Liz schließlich ihre tiefe Wut austoben und ihre Kraft sinnvoll einsetzen.",
+"sophora:modificationDate": "2013-11-12T15:54:20+01:00",
+"br-core:rights": "© Bayerischer Rundfunk",
+"br-core:geoProtected": false,
+"br-core:version": "2013-11-12T15:15:09.000+01:00",
+"br-core:duration": "00:43:59",
+"br-core:onDemand": false,
+"br-core:contentType": "standard",
+"br-core:channelId": "channel_28107",
+"br-core:premium": false,
+"br-core:topline": "Lebenslinien",
+"br-core:retentionEndDate": "2014-10-21T14:33:47+02:00",
+"br-core:contributionTitle": "Liz, ein fränkischer Wirbelwind",
+"br-core:anamorph": true,
+"jcr:primaryType": "br-core-nt:video",
+"br-core:editorsChoice": false,
+"br-core:download": false,
+"br-core:webTime": "2013-10-21T14:33:47+02:00",
+"br-core:retentionPeriod": "av-retention1",
+"sophora:tags": "",
+"br-core:author": "Carla Kilian",
+"br-core:onlineSince": "2013-11-12T15:54:20+01:00",
+"br-core:broadcastDate": "2013-10-21T21:00:00+02:00",
+"br-core:teaserShortHeadline": "Lebenslinien",
+"br-core:entireBroadcast": false,
+"sophora:id": "lebenslinien-liz-fraenksicher-wirbelwind-102",
+"br-core:allowComments": false,
+"sophora:endDate": "2014-10-21T14:33:47+02:00"
+},
+"teaserImage": {
+"_links": {
+"image108": {
+"width": 108,
+"height": 61,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/bayerisches-fernsehen/sendungen/lebenslinien/lebenslinien-liz-fraenkischer-wirbelwind-106~_v-image108_-66c52eb681875eba5ba438be6ed7d3be2493bc95.jpg?version=04ff1"
+},
+"original": {
+"width": 1280,
+"height": 850,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/bayerisches-fernsehen/sendungen/lebenslinien/lebenslinien-liz-fraenkischer-wirbelwind-106~_v-original_-4490982a09ce564896c0546e698c092a87185c1e.jpg?version=04ff1"
+},
+"image480q": {
+"width": 480,
+"height": 480,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/bayerisches-fernsehen/sendungen/lebenslinien/lebenslinien-liz-fraenkischer-wirbelwind-106~_v-image480q_-86e76969c4c6eae737b1aecd7f2fc4c32e479f73.jpg?version=04ff1"
+},
+"image217h": {
+"width": 216,
+"height": 288,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/bayerisches-fernsehen/sendungen/lebenslinien/lebenslinien-liz-fraenkischer-wirbelwind-106~_v-image217h_-6c26eb444667f0f1513b6415dad8d99038a8f1be.jpg?version=04ff1"
+},
+"image256q": {
+"width": 256,
+"height": 256,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/bayerisches-fernsehen/sendungen/lebenslinien/lebenslinien-liz-fraenkischer-wirbelwind-106~_v-image256q_-b3c42639c67a6be7ffdb26e353b8478c1dcadb61.jpg?version=04ff1"
+},
+"image512": {
+"width": 512,
+"height": 288,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/bayerisches-fernsehen/sendungen/lebenslinien/lebenslinien-liz-fraenkischer-wirbelwind-106~_v-image512_-6a0b0d9618fb94fd9ee05a84a1099a13ec9d3321.jpg?version=04ff1"
+},
+"background": {
+"width": 1920,
+"height": 1275,
+"mimeType": "image/jpeg",
+"href": ""
+},
+"image360h": {
+"width": 360,
+"height": 480,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/bayerisches-fernsehen/sendungen/lebenslinien/lebenslinien-liz-fraenkischer-wirbelwind-106~_v-image360h_-ec2d8b4e42b653689c14a85ba776647dd3c70c56.jpg?version=04ff1"
+},
+"image256": {
+"width": 256,
+"height": 144,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/bayerisches-fernsehen/sendungen/lebenslinien/lebenslinien-liz-fraenkischer-wirbelwind-106~_v-image256_-a42a29b6703dc477fd0848bc845b8be5c48c1667.jpg?version=04ff1"
+},
+"image256h": {
+"width": 256,
+"height": 341,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/bayerisches-fernsehen/sendungen/lebenslinien/lebenslinien-liz-fraenkischer-wirbelwind-106~_v-image256h_-1f08f4ec4be92ccc06fdc72ba34a1cafc74be1d2.jpg?version=04ff1"
+},
+"image288q": {
+"width": 288,
+"height": 288,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/bayerisches-fernsehen/sendungen/lebenslinien/lebenslinien-liz-fraenkischer-wirbelwind-106~_v-image288q_-b88847aebe67b5ffe13e44dad5d499444896bf7b.jpg?version=04ff1"
+},
+"image853": {
+"width": 854,
+"height": 480,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/bayerisches-fernsehen/sendungen/lebenslinien/lebenslinien-liz-fraenkischer-wirbelwind-106~_v-image853_-7ce44e292721619ab1c1077f6f262a89f55266d7.jpg?version=04ff1"
+},
+"webmerlin320": {
+"width": 320,
+"height": 240,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/bayerisches-fernsehen/sendungen/lebenslinien/lebenslinien-liz-fraenkischer-wirbelwind-106~_v-webmerlin320_-dfc202e262660dce3a68613ca3a12c17b320c95e.jpg?version=04ff1"
+}
+},
+"headline": "Lebenslinien: Liz, fränkischer Wirbelwind",
+"altText": "Lebenslinien: Liz, fränkischer Wirbelwind | Bild: Manfred Amandi",
+"rights": "Manfred Amandi"
+},
+"headline": "Liz, ein fränkischer Wirbelwind",
+"topline": "Lebenslinien",
+"boxTitle": "bestbewertet",
+"teaserText": "Im ländlichen Oberfranken ist es 1950 noch eine Schande, wie Liz als uneheliches Kind zur Welt zu kommen. In der Schule entdeckt ihre Lehrerin Liz' außergewöhnliches Rhythmusgefühl. Die Außenseiterin darf als Schlagzeugschülerin ans Konservatorium. Am Schlagzeug und besonders an der Marimba kann Liz schließlich ihre tiefe Wut austoben und ihre Kraft sinnvoll einsetzen.",
+"channelTitle": "Bayerisches Fernsehen"
+},
+{
+"_links": {
+"self": {"href": "http://www.br.de/mediathek/video/sendungen/fastnacht-in-franken/2014-fastnacht-in-franken-102~hal_vt-medcc1_-bff08c03fe069a9ee9013704adcbd4855992ad2a.json"},
+"html": {"href": "http://www.br.de/mediathek/video/sendungen/fastnacht-in-franken/2014-fastnacht-in-franken-102.html"},
+"boxIndexPage": {"href": "http://www.br.de/mediathek/video/suche/tag-suche-mediathek-100~hal_vt-medcc1_-bff08c03fe069a9ee9013704adcbd4855992ad2a.json?t=social&q=mostRecommended"}
+},
+"documentProperties": {
+"br-core:teaserText": "Spitze Sprüche und freche Franken: die Prunksitzung des Fastnacht-Verbandes Franken in voller Länge. Durch das Programm führte Komiker Bernd Händel.",
+"sophora:modificationDate": "2014-02-25T14:28:04+01:00",
+"br-core:rights": "© Bayerischer Rundfunk",
+"br-core:geoProtected": false,
+"br-core:version": "2014-02-22T10:38:38.000+01:00",
+"br-core:duration": "03:31:54",
+"br-core:onDemand": false,
+"br-core:contentType": "standard",
+"br-core:channelId": "channel_28107",
+"br-core:premium": false,
+"br-core:topline": "Fastnacht in Franken",
+"br-core:contributionTitle": "Fastnacht in Franken",
+"br-core:anamorph": true,
+"jcr:primaryType": "br-core-nt:video",
+"br-core:editorsChoice": false,
+"br-core:download": false,
+"br-core:webTime": "2014-02-22T09:01:15+01:00",
+"br-core:retentionPeriod": "retention6",
+"sophora:tags": "ufr fif Untertitel",
+"br-core:author": "Rüdiger Baumann",
+"br-core:onlineSince": "2014-02-22T12:41:29+01:00",
+"br-core:broadcastDate": "2014-02-21T19:10:15+01:00",
+"br-core:entireBroadcast": true,
+"sophora:id": "2014-fastnacht-in-franken-102",
+"br-core:allowComments": false
+},
+"teaserImage": {
+"_links": {
+"image108": {
+"width": 108,
+"height": 61,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fastnacht-in-franken/2014-fastnacht-in-franken-bild-100~_v-image108_-66c52eb681875eba5ba438be6ed7d3be2493bc95.jpg?version=dba76"
+},
+"original": {
+"width": 1280,
+"height": 720,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fastnacht-in-franken/2014-fastnacht-in-franken-bild-100~_v-original_-4490982a09ce564896c0546e698c092a87185c1e.jpg?version=dba76"
+},
+"image480q": {
+"width": 480,
+"height": 480,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fastnacht-in-franken/2014-fastnacht-in-franken-bild-100~_v-image480q_-86e76969c4c6eae737b1aecd7f2fc4c32e479f73.jpg?version=dba76"
+},
+"image217h": {
+"width": 216,
+"height": 288,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fastnacht-in-franken/2014-fastnacht-in-franken-bild-100~_v-image217h_-6c26eb444667f0f1513b6415dad8d99038a8f1be.jpg?version=dba76"
+},
+"image256q": {
+"width": 256,
+"height": 256,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fastnacht-in-franken/2014-fastnacht-in-franken-bild-100~_v-image256q_-b3c42639c67a6be7ffdb26e353b8478c1dcadb61.jpg?version=dba76"
+},
+"image512": {
+"width": 512,
+"height": 288,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fastnacht-in-franken/2014-fastnacht-in-franken-bild-100~_v-image512_-6a0b0d9618fb94fd9ee05a84a1099a13ec9d3321.jpg?version=dba76"
+},
+"background": {
+"width": 1920,
+"height": 1080,
+"mimeType": "image/jpeg",
+"href": ""
+},
+"image360h": {
+"width": 360,
+"height": 480,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fastnacht-in-franken/2014-fastnacht-in-franken-bild-100~_v-image360h_-ec2d8b4e42b653689c14a85ba776647dd3c70c56.jpg?version=dba76"
+},
+"image256": {
+"width": 256,
+"height": 144,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fastnacht-in-franken/2014-fastnacht-in-franken-bild-100~_v-image256_-a42a29b6703dc477fd0848bc845b8be5c48c1667.jpg?version=dba76"
+},
+"image256h": {
+"width": 256,
+"height": 341,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fastnacht-in-franken/2014-fastnacht-in-franken-bild-100~_v-image256h_-1f08f4ec4be92ccc06fdc72ba34a1cafc74be1d2.jpg?version=dba76"
+},
+"image288q": {
+"width": 288,
+"height": 288,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fastnacht-in-franken/2014-fastnacht-in-franken-bild-100~_v-image288q_-b88847aebe67b5ffe13e44dad5d499444896bf7b.jpg?version=dba76"
+},
+"image853": {
+"width": 854,
+"height": 480,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fastnacht-in-franken/2014-fastnacht-in-franken-bild-100~_v-image853_-7ce44e292721619ab1c1077f6f262a89f55266d7.jpg?version=dba76"
+},
+"webmerlin320": {
+"width": 320,
+"height": 240,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fastnacht-in-franken/2014-fastnacht-in-franken-bild-100~_v-webmerlin320_-dfc202e262660dce3a68613ca3a12c17b320c95e.jpg?version=dba76"
+}
+},
+"headline": "Die Kultsendung Fastnacht in Franken",
+"altText": "Die Kultsendung Fastnacht in Franken | Bild: Bayerischer Rundfunk",
+"rights": "Bayerischer Rundfunk"
+},
+"headline": "Die Prunksitzung in voller Länge",
+"topline": "Fastnacht in Franken",
+"boxTitle": "meistempfohlen",
+"teaserText": "Spitze Sprüche und freche Franken: die Prunksitzung des Fastnacht-Verbandes Franken in voller Länge. Durch das Programm führte Komiker Bernd Händel.",
+"channelTitle": "Bayerisches Fernsehen"
+},
+{
+"_links": {
+"self": {"href": "http://www.br.de/mediathek/video/sendungen/heimatsound/heimatsound-interview-sebastian-horn-100~hal_vt-medcc1_-bff08c03fe069a9ee9013704adcbd4855992ad2a.json"},
+"html": {"href": "http://www.br.de/mediathek/video/sendungen/heimatsound/heimatsound-interview-sebastian-horn-100.html"},
+"boxIndexPage": {"href": "http://www.br.de/mediathek/video/suche/tag-suche-mediathek-100~hal_vt-medcc1_-bff08c03fe069a9ee9013704adcbd4855992ad2a.json?t=category&q=web-exklusiv"}
+},
+"documentProperties": {
+"br-core:teaserText": "Der neue Heimatsound-Moderator Sebastian Horn, seines Zeichens Frontmann der Band Bananafishbones, stellt sich vor.",
+"sophora:modificationDate": "2014-03-27T16:22:19+01:00",
+"br-core:rights": "Bayerischer Rundfunk 2014",
+"br-core:geoProtected": false,
+"br-core:version": "2014-03-27T12:52:16.000+01:00",
+"br-core:duration": "00:02:30",
+"br-core:onDemand": false,
+"br-core:contentType": "standard",
+"br-core:channelId": "channel_28107",
+"br-core:premium": false,
+"br-core:topline": "Der neue Moderator",
+"br-core:retentionEndDate": "2015-03-27T15:46:51+01:00",
+"br-core:contributionTitle": "Interview mit Sebastian Horn",
+"jcr:primaryType": "br-core-nt:video",
+"br-core:anamorph": true,
+"br-core:editorsChoice": false,
+"br-core:download": false,
+"br-core:webTime": "2014-03-27T15:46:51+01:00",
+"br-core:retentionPeriod": "av-retention4",
+"sophora:tags": "",
+"br-core:author": "Jessicca Lepke",
+"br-core:onlineSince": "2014-03-27T15:47:08+01:00",
+"br-core:broadcastDate": "2014-10-17T23:15:00+02:00",
+"br-core:teaserShortHeadline": "Moderator Sebastian Horn",
+"br-core:entireBroadcast": false,
+"sophora:id": "heimatsound-interview-sebastian-horn-100",
+"br-core:allowComments": false,
+"sophora:endDate": "2015-03-27T15:46:51+01:00"
+},
+"teaserImage": {
+"_links": {
+"image108": {
+"width": 108,
+"height": 61,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/themen/kultur/sendungen/heimatsound/heimatsound-interview-sebastian-horn-bild-100~_v-image108_-66c52eb681875eba5ba438be6ed7d3be2493bc95.jpg?version=6b021"
+},
+"original": {
+"width": 1280,
+"height": 720,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/themen/kultur/sendungen/heimatsound/heimatsound-interview-sebastian-horn-bild-100~_v-original_-4490982a09ce564896c0546e698c092a87185c1e.jpg?version=6b021"
+},
+"image480q": {
+"width": 480,
+"height": 480,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/themen/kultur/sendungen/heimatsound/heimatsound-interview-sebastian-horn-bild-100~_v-image480q_-86e76969c4c6eae737b1aecd7f2fc4c32e479f73.jpg?version=6b021"
+},
+"image217h": {
+"width": 216,
+"height": 288,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/themen/kultur/sendungen/heimatsound/heimatsound-interview-sebastian-horn-bild-100~_v-image217h_-6c26eb444667f0f1513b6415dad8d99038a8f1be.jpg?version=6b021"
+},
+"image256q": {
+"width": 256,
+"height": 256,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/themen/kultur/sendungen/heimatsound/heimatsound-interview-sebastian-horn-bild-100~_v-image256q_-b3c42639c67a6be7ffdb26e353b8478c1dcadb61.jpg?version=6b021"
+},
+"image512": {
+"width": 512,
+"height": 288,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/themen/kultur/sendungen/heimatsound/heimatsound-interview-sebastian-horn-bild-100~_v-image512_-6a0b0d9618fb94fd9ee05a84a1099a13ec9d3321.jpg?version=6b021"
+},
+"image360h": {
+"width": 360,
+"height": 480,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/themen/kultur/sendungen/heimatsound/heimatsound-interview-sebastian-horn-bild-100~_v-image360h_-ec2d8b4e42b653689c14a85ba776647dd3c70c56.jpg?version=6b021"
+},
+"image256": {
+"width": 256,
+"height": 144,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/themen/kultur/sendungen/heimatsound/heimatsound-interview-sebastian-horn-bild-100~_v-image256_-a42a29b6703dc477fd0848bc845b8be5c48c1667.jpg?version=6b021"
+},
+"image256h": {
+"width": 256,
+"height": 341,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/themen/kultur/sendungen/heimatsound/heimatsound-interview-sebastian-horn-bild-100~_v-image256h_-1f08f4ec4be92ccc06fdc72ba34a1cafc74be1d2.jpg?version=6b021"
+},
+"image288q": {
+"width": 288,
+"height": 288,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/themen/kultur/sendungen/heimatsound/heimatsound-interview-sebastian-horn-bild-100~_v-image288q_-b88847aebe67b5ffe13e44dad5d499444896bf7b.jpg?version=6b021"
+},
+"image853": {
+"width": 854,
+"height": 480,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/themen/kultur/sendungen/heimatsound/heimatsound-interview-sebastian-horn-bild-100~_v-image853_-7ce44e292721619ab1c1077f6f262a89f55266d7.jpg?version=6b021"
+},
+"webmerlin320": {
+"width": 320,
+"height": 240,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/themen/kultur/sendungen/heimatsound/heimatsound-interview-sebastian-horn-bild-100~_v-webmerlin320_-dfc202e262660dce3a68613ca3a12c17b320c95e.jpg?version=6b021"
+}
+},
+"headline": "Heimatsound-Moderator Sebastian Horn",
+"altText": "Heimatsound-Moderator Sebastian Horn | Bild: BR",
+"rights": "BR"
+},
+"headline": "Sebastian Horn stellt sich vor",
+"topline": "Der neue Moderator",
+"boxTitle": "Web exclusiv",
+"teaserText": "Der neue Heimatsound-Moderator Sebastian Horn, seines Zeichens Frontmann der Band Bananafishbones, stellt sich vor.",
+"channelTitle": "Bayerisches Fernsehen"
+},
+{
+"_links": {
+"self": {"href": "http://www.br.de/mediathek/video/sendungen/kontrovers/deutsche-islamisten-syrien-100~hal_vt-medcc1_-bff08c03fe069a9ee9013704adcbd4855992ad2a.json"},
+"html": {"href": "http://www.br.de/mediathek/video/sendungen/kontrovers/deutsche-islamisten-syrien-100.html"},
+"boxIndexPage": {"href": "http://www.br.de/mediathek/video/suche/tag-suche-mediathek-100~hal_vt-medcc1_-bff08c03fe069a9ee9013704adcbd4855992ad2a.json?t=category&q=trailer"}
+},
+"documentProperties": {
+"br-core:teaserText": "Hunderte junger Deutscher kämpfen zur Zeit im syrischen Bürgerkrieg auf Seiten islamistischer Terrorgruppen. Auch Islamisten aus Bayern sind darunter. Die Gesellschaft steht der Radikalisierung weitgehend hilflos gegenüber ...",
+"sophora:modificationDate": "2014-08-12T12:04:57+02:00",
+"br-core:rights": "Bayerischer Rundfunk 2014",
+"br-core:geoProtected": false,
+"br-core:version": "2014-08-12T00:16:49.000+02:00",
+"br-core:onDemand": false,
+"br-core:duration": "00:00:23",
+"br-core:contentType": "standard",
+"br-core:channelId": "channel_28107",
+"br-core:premium": false,
+"br-core:topline": "Kontrovers extra am 13.8.",
+"br-core:retentionEndDate": "2015-08-12T00:37:59+02:00",
+"br-core:contributionTitle": "Kontrovers extra am 13.8.: Der Weg deutscher Gotteskrieger nach Syrien",
+"jcr:primaryType": "br-core-nt:video",
+"br-core:anamorph": true,
+"br-core:editorsChoice": false,
+"br-core:download": false,
+"br-core:webTime": "2014-08-12T00:37:59+02:00",
+"br-core:retentionPeriod": "av-retention1",
+"sophora:tags": "KON 13.08.2014 gotteskrieger syrien",
+"br-core:author": "Kontrovers",
+"br-core:onlineSince": "2014-08-12T00:38:13+02:00",
+"br-core:broadcastDate": "2014-08-13T21:00:00+02:00",
+"br-core:entireBroadcast": false,
+"sophora:id": "deutsche-islamisten-syrien-100",
+"br-core:allowComments": false,
+"sophora:endDate": "2015-08-12T00:37:59+02:00"
+},
+"teaserImage": {
+"_links": {
+"image108": {
+"width": 108,
+"height": 61,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/bayerisches-fernsehen/sendungen/kontrovers/deutsche-islamisten-syrien-bild-102~_v-image108_-66c52eb681875eba5ba438be6ed7d3be2493bc95.jpg?version=3275d"
+},
+"original": {
+"width": 1280,
+"height": 720,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/bayerisches-fernsehen/sendungen/kontrovers/deutsche-islamisten-syrien-bild-102~_v-original_-4490982a09ce564896c0546e698c092a87185c1e.jpg?version=3275d"
+},
+"image480q": {
+"width": 480,
+"height": 480,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/bayerisches-fernsehen/sendungen/kontrovers/deutsche-islamisten-syrien-bild-102~_v-image480q_-86e76969c4c6eae737b1aecd7f2fc4c32e479f73.jpg?version=3275d"
+},
+"image217h": {
+"width": 216,
+"height": 288,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/bayerisches-fernsehen/sendungen/kontrovers/deutsche-islamisten-syrien-bild-102~_v-image217h_-6c26eb444667f0f1513b6415dad8d99038a8f1be.jpg?version=3275d"
+},
+"image256q": {
+"width": 256,
+"height": 256,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/bayerisches-fernsehen/sendungen/kontrovers/deutsche-islamisten-syrien-bild-102~_v-image256q_-b3c42639c67a6be7ffdb26e353b8478c1dcadb61.jpg?version=3275d"
+},
+"image512": {
+"width": 512,
+"height": 288,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/bayerisches-fernsehen/sendungen/kontrovers/deutsche-islamisten-syrien-bild-102~_v-image512_-6a0b0d9618fb94fd9ee05a84a1099a13ec9d3321.jpg?version=3275d"
+},
+"image360h": {
+"width": 360,
+"height": 480,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/bayerisches-fernsehen/sendungen/kontrovers/deutsche-islamisten-syrien-bild-102~_v-image360h_-ec2d8b4e42b653689c14a85ba776647dd3c70c56.jpg?version=3275d"
+},
+"image256": {
+"width": 256,
+"height": 144,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/bayerisches-fernsehen/sendungen/kontrovers/deutsche-islamisten-syrien-bild-102~_v-image256_-a42a29b6703dc477fd0848bc845b8be5c48c1667.jpg?version=3275d"
+},
+"image256h": {
+"width": 256,
+"height": 341,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/bayerisches-fernsehen/sendungen/kontrovers/deutsche-islamisten-syrien-bild-102~_v-image256h_-1f08f4ec4be92ccc06fdc72ba34a1cafc74be1d2.jpg?version=3275d"
+},
+"image288q": {
+"width": 288,
+"height": 288,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/bayerisches-fernsehen/sendungen/kontrovers/deutsche-islamisten-syrien-bild-102~_v-image288q_-b88847aebe67b5ffe13e44dad5d499444896bf7b.jpg?version=3275d"
+},
+"image853": {
+"width": 854,
+"height": 480,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/bayerisches-fernsehen/sendungen/kontrovers/deutsche-islamisten-syrien-bild-102~_v-image853_-7ce44e292721619ab1c1077f6f262a89f55266d7.jpg?version=3275d"
+},
+"webmerlin320": {
+"width": 320,
+"height": 240,
+"mimeType": "image/jpeg",
+"href": "http://www.br.de/fernsehen/bayerisches-fernsehen/sendungen/kontrovers/deutsche-islamisten-syrien-bild-102~_v-webmerlin320_-dfc202e262660dce3a68613ca3a12c17b320c95e.jpg?version=3275d"
+}
+},
+"headline": "Gotteskrieger in Syrien",
+"altText": "Gotteskrieger in Syrien | Bild: Bayerischer Rundfunk",
+"rights": "Bayerischer Rundfunk"
+},
+"headline": "Der Weg deutscher Gotteskrieger nach Syrien",
+"topline": "Kontrovers extra am 13.8.",
+"boxTitle": "Trailer",
+"teaserText": "Hunderte junger Deutscher kämpfen zur Zeit im syrischen Bürgerkrieg auf Seiten islamistischer Terrorgruppen. Auch Islamisten aus Bayern sind darunter. Die Gesellschaft steht der Radikalisierung weitgehend hilflos gegenüber ...",
+"channelTitle": "Bayerisches Fernsehen"
+}
+]},
+"headline": "Livestreams und Videos zum Nachschauen",
+"topline": "BR Mediathek Video",
+"invalidationDate": "2014-08-18T10:02:05+02:00"
+}
