@@ -963,7 +963,7 @@
         console.log("### Media Manager - LOAD: " + JSON.stringify(event));
         setHudMessage('mediaManagerMessage', 'LOAD ' + JSON.stringify(event));
 
-        sampleplayer.fetchJson_();
+        //sampleplayer.fetchJson_();
 
         $.getJSON("startpage.json", function(json) {
             sampleplayer.parseJson_(json);
