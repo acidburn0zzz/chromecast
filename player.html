@@ -1074,7 +1074,7 @@
 
             var protocol = null;
 
-            if(mimeType.indexOf('livestream') == 0) {
+            if(contentType.indexOf('livestream') == 0) {
                 protocol = cast.player.api.CreateHlsStreamingProtocol(window.mediaHost);
             } else {
                 protocol = cast.player.api.CreateDashStreamingProtocol(window.mediaHost);
