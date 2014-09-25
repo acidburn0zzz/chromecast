@@ -268,16 +268,14 @@
     sampleplayer.CastPlayer.prototype.setContentType_ = function(mimeType) {
 
         // HLS stream mimetype 'application/vnd.apple.mpegURL'
-        //if (mimeType.indexOf('application/vnd.apple.mpegURL') == 0) {
-        if(mimeType == 0) {
+        if (mimeType.indexOf('application/vnd.apple.mpegURL') == 0) {
             this.type_ = sampleplayer.Type.VIDEO;
             this.isLivestream_ = false;
 
             $(".controls-total-time").show();
             $(".controls-progress").show();
         }
-        //if(mimeType.indexOf('livestream') == 0) {
-        else {
+        if(mimeType.indexOf('livestream') == 0) {
             //this.type_ =  sampleplayer.Type.LIVESTREAM;
             this.type_ = sampleplayer.Type.VIDEO;
             this.isLivestream_ = true;
@@ -1003,7 +1001,7 @@
         var contentId = sampleplayer.getValue_(event.data, ['media', 'contentId']); //url
         var contentType = sampleplayer.getValue_(event.data, ['media', 'contentType']); //mimetype & livestream
         var streamType = event.data.media.streamType;
-        self.setContentType_(streamType);
+        self.setContentType_(contentType);
 
         self.setState_(sampleplayer.State.LOADING, false);
 
@@ -1075,7 +1073,12 @@
 
 
             var protocol = null;
-            protocol =  cast.player.api.CreateHlsStreamingProtocol(window.mediaHost);
+
+            if(mimeType.indexOf('livestream') == 0) {
+                protocol = cast.player.api.CreateHlsStreamingProtocol(window.mediaHost);
+            } else {
+                protocol = cast.player.api.CreateDashStreamingProtocol(window.mediaHost);
+            }
             if (protocol === null) {
                 // Call on original handler
                 window.mediaManager['onLoadOrig'](event); // Call on the original callback
