@@ -268,14 +268,16 @@
     sampleplayer.CastPlayer.prototype.setContentType_ = function(mimeType) {
 
         // HLS stream mimetype 'application/vnd.apple.mpegURL'
-        if (mimeType.indexOf('application/vnd.apple.mpegURL') == 0) {
+        //if (mimeType.indexOf('application/vnd.apple.mpegURL') == 0) {
+        if(mimeType == 0) {
             this.type_ = sampleplayer.Type.VIDEO;
             this.isLivestream_ = false;
 
             $(".controls-total-time").show();
             $(".controls-progress").show();
         }
-        if(mimeType.indexOf('livestream') == 0) {
+        //if(mimeType.indexOf('livestream') == 0) {
+        else {
             //this.type_ =  sampleplayer.Type.LIVESTREAM;
             this.type_ = sampleplayer.Type.VIDEO;
             this.isLivestream_ = true;
@@ -1000,8 +1002,8 @@
 
         var contentId = sampleplayer.getValue_(event.data, ['media', 'contentId']); //url
         var contentType = sampleplayer.getValue_(event.data, ['media', 'contentType']); //mimetype & livestream
-
-        self.setContentType_(contentType);
+        var streamType = event.data.media.streamType;
+        self.setContentType_(streamType);
 
         self.setState_(sampleplayer.State.LOADING, false);
 
@@ -1082,7 +1084,7 @@
                 // Player registers to listen to the media element events through the mediaHost property of the
                 // mediaElement
                 window.mediaPlayer = new cast.player.api.Player(window.mediaHost);
-                if (contentType == "livestream") {
+                if (streamType == 1) {
                     console.log('####### Casting livestream');
                     //window.mediaPlayer.load(protocol, Number.POSITIVE_INFINITY);
                     window.mediaPlayer.load(protocol, initialTimeIndexSeconds);
