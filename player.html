@@ -1230,6 +1230,9 @@
 
         if(window.player.state_ != sampleplayer.State.SEEKING) {
 
+
+
+            //TODO: Showing buffering state for pause event should only be done when we use
             if (window.mediaPlayer.getState().underflow) {
                 // video is paused because of buffering
                 // handing buffering event here
