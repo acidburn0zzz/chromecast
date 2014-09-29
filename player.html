@@ -1081,7 +1081,7 @@
 
                 var protocol = null;
 
-                if(contentType.indexOf('livestream') == 0) {
+                if (contentType.indexOf('livestream') == 0) {
                     protocol = cast.player.api.CreateHlsStreamingProtocol(window.mediaHost);
                 } else {
                     protocol = cast.player.api.CreateDashStreamingProtocol(window.mediaHost);
@@ -1098,14 +1098,14 @@
                         console.log('####### Casting livestream');
                         //window.mediaPlayer.load(protocol, Number.POSITIVE_INFINITY);
                         window.mediaPlayer.load(protocol, initialTimeIndexSeconds);
-                    }else {
+                    } else {
                         console.log('####### Casting VOD');
                         window.mediaPlayer.load(protocol, initialTimeIndexSeconds);
 
                     }
                 }
             }
-
+        }
     }
 
     /**
