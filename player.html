@@ -1020,6 +1020,9 @@
         if (event.data['media'] && event.data['media']['contentId']) {
 
             var url = event.data['media']['contentId'];
+            if (window.mediaPlayer !== null) {
+                window.mediaPlayer.unload(); // Ensure unload before loading again
+            }
 
             //If MP4
             if (window.player.videoType_ == sampleplayer.videoType.MP4) {
@@ -1028,6 +1031,14 @@
                 //window.imageElement.removeAttribute('src');
                 //window.mediaElement.autoplay = autoplay || true;
                 //window.mediaElement.src = url || '';
+
+                window.mediaPlayer.unload();
+                /*
+                window.mediaHost = null;
+                window.mediaProtocol = null;
+                window.mediaPlayer = null;
+                */
+
                 window.mediaElement.src = url || '';
             }
             //If HLS
@@ -1038,6 +1049,7 @@
                 if (window.mediaPlayer !== null) {
                     window.mediaPlayer.unload(); // Ensure unload before loading again
                 }
+
 
                 window.mediaHost = new cast.player.api.Host({
                     'mediaElement': window.mediaElement,
@@ -1095,6 +1107,8 @@
                     // Player registers to listen to the media element events through the mediaHost property of the
                     // mediaElement
                     window.mediaPlayer = new cast.player.api.Player(window.mediaHost);
+
+                    //TODO: fix so that livestreams starts at infinite number starting time
                     if (streamType == 1) {
                         console.log('####### Casting livestream');
                         //window.mediaPlayer.load(protocol, Number.POSITIVE_INFINITY);
