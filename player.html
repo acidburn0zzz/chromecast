@@ -100,6 +100,11 @@
         VIDEO: 'video',
     };
 
+    sampleplayer.videoType = {
+        HLS: 'hls',
+        MP4: 'mp4',
+    };
+
     /**
      * Describes the state of the player
      *
@@ -177,6 +182,8 @@
 
         this.state_;
 
+        this.videoType_;
+
         this.setState_(sampleplayer.State.LAUNCHING);
 
         this.mediaElement_ = /** @type {HTMLMediaElement} */
@@ -191,11 +198,6 @@
 
         this.idleBoxElement_ = document.getElementById('idle-box');
         this.currentSliderIndex_ = 1;
-
-
-        //var test =
-
-
 
     };
 
@@ -268,15 +270,31 @@
     sampleplayer.CastPlayer.prototype.setContentType_ = function(mimeType) {
 
         // HLS stream mimetype 'application/vnd.apple.mpegURL'
+        // MP4 stream mimetyype 'video/mp4'
+
         if (mimeType.indexOf('application/vnd.apple.mpegURL') == 0) {
             this.type_ = sampleplayer.Type.VIDEO;
+            this.videoType_ = sampleplayer.videoType.HLS;
             this.isLivestream_ = false;
 
             $(".controls-total-time").show();
             $(".controls-progress").show();
         }
+
+        if (mimeType.indexOf('video/mp4') == 0) {
+            this.type_ = sampleplayer.Type.VIDEO;
+            this.videoType_ = sampleplayer.videoType.MP4;
+            this.isLivestream_ = false;
+
+            $(".controls-total-time").show();
+            $(".controls-progress").show();
+        }
+
         if(mimeType.indexOf('livestream') == 0) {
-            //this.type_ =  sampleplayer.Type.LIVESTREAM;
+
+            //OBS: Livestreams are HLS only
+            //Livestreams are HLS only
+            this.videoType_ = sampleplayer.videoType.HLS;
             this.type_ = sampleplayer.Type.VIDEO;
             this.isLivestream_ = true;
             /*
@@ -296,7 +314,6 @@
     sampleplayer.CastPlayer.prototype.setState_ = function(state, crossfade, delay){
         var self = this;
         clearTimeout(self.delay_);
-
         if (delay) {
             var func = function() { self.setState_(state, crossfade); };
             self.delay_ = setTimeout(func, delay);
@@ -733,26 +750,14 @@
      * @param obj
      */
     window.mediaManager.onError = function(obj) {
-
         /*
-
          MEDIA_ERR_ABORTED (1) User aborted video playback
-
          MEDIA_ERR_NETWORK (2) Network error (could not read the stream)
-
          MEDIA_ERR_DECODE (3) Decoding error, video is broken or the codec makes problems
-
          MEDIA_ERR_SRC_NOT_SUPPORTED (4) The format is not supported
-
-
-
         */
-
         console.log("### Media Manager - error: " + obj);
-        //setHudMessage('mediaManagerMessage', 'ERROR - ' + JSON.stringify(obj));
-
         window.player.setState_(sampleplayer.State.DONE, true);
-
         window.mediaManager['onErrorOrig'](obj);
     }
 
@@ -1009,95 +1014,98 @@
         // TODO - if there is an error during load: call mediaManager.sendLoadError to notify sender
         // TODO - if there is no error call mediaManager.sendLoadCompleteComplete
         // TODO - call mediaManager.setMediaInformation(MediaInformation)
+        var initialTimeIndexSeconds = event.data['media']['currentTime'] || 0;
 
-        if(window.mediaPlayer !== null) {
-            window.mediaPlayer.unload(); // Ensure unload before loading again
-        }
-
+        //If we have video and metadata, initialize loading
         if (event.data['media'] && event.data['media']['contentId']) {
+
             var url = event.data['media']['contentId'];
 
-            window.mediaHost = new cast.player.api.Host({
-                'mediaElement': window.mediaElement,
-                'url': url //"/chromecast/teststream2/fail2.m3u8" // url //"/chromecast/teststream/master-failed.m3u8"
-            });
+            //If MP4
+            if (window.player.videoType == sampleplayer.videoType.MP4) {
+                console.log("Loading MP4 stream");
+                window.mediaElement_.onload = null;
+                window.mediaElement_.removeAttribute('src');
+                window.mediaElement_.autoplay = autoplay || true;
+                window.mediaElement_.src = url || '';
+            }
+            //If HLS
+            if (window.player.videoType == sampleplayer.videoType.HLS) {
 
-            //host.initialBandwidth = 3 * 1024 * 1024; // 3 MBPS   //Default is 2 MBPS
-
-            /*
-
-             cast.player.api.ErrorCode.MANIFEST
-             Error loading or parsing the manifest.
-
-             cast.player.api.ErrorCode.MEDIAKEYS
-             Error fetching the keys or decrypting the content.
-
-             cast.player.api.ErrorCode.NETWORK
-             Network error.
-
-             cast.player.api.ErrorCode.PLAYBACK
-             Error related to media playback.
-
-             {MANIFEST:0,PLAYBACK:1,MEDIAKEYS:2,NETWORK:3}
-
-            */
-            window.mediaHost.onError = function (errorCode) {
-                console.log("### HOST ERROR - Fatal Error: code = " + errorCode);
-                //setHudMessage('mediaHostState', 'Fatal Error: code = ' + errorCode);
-
-                //var errorType = cast.player.api.ErrorCode(errorCode);
+                console.log("Loading HLS stream");
 
                 if (window.mediaPlayer !== null) {
-                    /*
-                    if (errorCode == 1) {
-                        window.mediaPlayer.reload();
+                    window.mediaPlayer.unload(); // Ensure unload before loading again
+                }
 
-                    } else {
+                window.mediaHost = new cast.player.api.Host({
+                    'mediaElement': window.mediaElement,
+                    'url': url //"/chromecast/teststream2/fail2.m3u8" // url //"/chromecast/teststream/master-failed.m3u8"
+                });
+
+
+                //host.initialBandwidth = 3 * 1024 * 1024; // 3 MBPS   //Default is 2 MBPS
+
+                /*
+
+                 cast.player.api.ErrorCode.MANIFEST
+                 Error loading or parsing the manifest.
+
+                 cast.player.api.ErrorCode.MEDIAKEYS
+                 Error fetching the keys or decrypting the content.
+
+                 cast.player.api.ErrorCode.NETWORK
+                 Network error.
+
+                 cast.player.api.ErrorCode.PLAYBACK
+                 Error related to media playback.
+
+                 {MANIFEST:0,PLAYBACK:1,MEDIAKEYS:2,NETWORK:3}
+
+                 */
+                window.mediaHost.onError = function (errorCode) {
+                    console.log(
+                                    "### HOST ERROR - Fatal Error: code = " + errorCode);
+                    //setHudMessage('mediaHostState', 'Fatal Error: code = ' + errorCode);
+
+                    //var errorType = cast.player.api.ErrorCode(errorCode);
+
+                    if (window.mediaPlayer !== null) {
 
                         window.mediaPlayer.unload();
 
-
                         mediaManager.resetMediaElement(cast.receiver.media.IdleReason.ERROR);
                     }
-                    */
+                    window.mediaManager.sendLoadError();
+                };
 
-                    window.mediaPlayer.unload();
+                var protocol = null;
 
-
-                    mediaManager.resetMediaElement(cast.receiver.media.IdleReason.ERROR);
+                if(contentType.indexOf('livestream') == 0) {
+                    protocol = cast.player.api.CreateHlsStreamingProtocol(window.mediaHost);
+                } else {
+                    protocol = cast.player.api.CreateDashStreamingProtocol(window.mediaHost);
                 }
-                window.mediaManager.sendLoadError();
-            };
+                if (protocol === null) {
+                    // Call on original handler
+                    window.mediaManager['onLoadOrig'](event); // Call on the original callback
+                } else {
+                    // Advanced Playback - HLS, MPEG DASH, SMOOTH STREAMING
+                    // Player registers to listen to the media element events through the mediaHost property of the
+                    // mediaElement
+                    window.mediaPlayer = new cast.player.api.Player(window.mediaHost);
+                    if (streamType == 1) {
+                        console.log('####### Casting livestream');
+                        //window.mediaPlayer.load(protocol, Number.POSITIVE_INFINITY);
+                        window.mediaPlayer.load(protocol, initialTimeIndexSeconds);
+                    }else {
+                        console.log('####### Casting VOD');
+                        window.mediaPlayer.load(protocol, initialTimeIndexSeconds);
 
-            var initialTimeIndexSeconds = event.data['media']['currentTime'] || 0;
-
-
-            var protocol = null;
-
-            if(contentType.indexOf('livestream') == 0) {
-                protocol = cast.player.api.CreateHlsStreamingProtocol(window.mediaHost);
-            } else {
-                protocol = cast.player.api.CreateDashStreamingProtocol(window.mediaHost);
-            }
-            if (protocol === null) {
-                // Call on original handler
-                window.mediaManager['onLoadOrig'](event); // Call on the original callback
-            } else {
-                // Advanced Playback - HLS, MPEG DASH, SMOOTH STREAMING
-                // Player registers to listen to the media element events through the mediaHost property of the
-                // mediaElement
-                window.mediaPlayer = new cast.player.api.Player(window.mediaHost);
-                if (streamType == 1) {
-                    console.log('####### Casting livestream');
-                    //window.mediaPlayer.load(protocol, Number.POSITIVE_INFINITY);
-                    window.mediaPlayer.load(protocol, initialTimeIndexSeconds);
-                }else {
-                    console.log('####### Casting VOD');
-                    window.mediaPlayer.load(protocol, initialTimeIndexSeconds);
-
+                    }
                 }
             }
-        }
+
     }
 
     /**
