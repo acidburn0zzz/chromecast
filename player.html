@@ -1026,8 +1026,9 @@
                 console.log("Loading MP4 stream");
                 //window.imageElement.onload = null;
                 //window.imageElement.removeAttribute('src');
-                window.mediaElement_.autoplay = autoplay || true;
-                window.mediaElement_.src = url || '';
+                //window.mediaElement.autoplay = autoplay || true;
+                //window.mediaElement.src = url || '';
+                window.mediaElement.src = url || '';
             }
             //If HLS
             if (window.player.videoType_ == sampleplayer.videoType.HLS) {
