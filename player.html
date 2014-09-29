@@ -1077,8 +1077,7 @@
 
                  */
                 window.mediaHost.onError = function (errorCode) {
-                    console.log(
-                                    "### HOST ERROR - Fatal Error: code = " + errorCode);
+                    console.log("### HOST ERROR - Fatal Error: code = " + errorCode);
                     //setHudMessage('mediaHostState', 'Fatal Error: code = ' + errorCode);
 
                     //var errorType = cast.player.api.ErrorCode(errorCode);
@@ -1093,12 +1092,14 @@
                 };
 
                 var protocol = null;
-
+                protocol = cast.player.api.CreateHlsStreamingProtocol(window.mediaHost);
+                /*
                 if (contentType.indexOf('livestream') == 0) {
                     protocol = cast.player.api.CreateHlsStreamingProtocol(window.mediaHost);
                 } else {
                     protocol = cast.player.api.CreateDashStreamingProtocol(window.mediaHost);
                 }
+                */
                 if (protocol === null) {
                     // Call on original handler
                     window.mediaManager['onLoadOrig'](event); // Call on the original callback
