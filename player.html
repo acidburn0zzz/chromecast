@@ -1024,8 +1024,8 @@
             //If MP4
             if (window.player.videoType_ == sampleplayer.videoType.MP4) {
                 console.log("Loading MP4 stream");
-                window.mediaElement_.onload = null;
-                window.mediaElement_.removeAttribute('src');
+                //window.imageElement.onload = null;
+                //window.imageElement.removeAttribute('src');
                 window.mediaElement_.autoplay = autoplay || true;
                 window.mediaElement_.src = url || '';
             }
