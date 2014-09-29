@@ -1022,7 +1022,7 @@
             var url = event.data['media']['contentId'];
 
             //If MP4
-            if (window.player.videoType == sampleplayer.videoType.MP4) {
+            if (window.player.videoType_ == sampleplayer.videoType.MP4) {
                 console.log("Loading MP4 stream");
                 window.mediaElement_.onload = null;
                 window.mediaElement_.removeAttribute('src');
@@ -1030,7 +1030,7 @@
                 window.mediaElement_.src = url || '';
             }
             //If HLS
-            if (window.player.videoType == sampleplayer.videoType.HLS) {
+            if (window.player.videoType_ == sampleplayer.videoType.HLS) {
 
                 console.log("Loading HLS stream");
 
