@@ -524,6 +524,7 @@
     };
 
 
+
     window.player = new sampleplayer.CastPlayer(playerDiv); // NEW OBJECT
 
 
@@ -1027,18 +1028,7 @@
             //If MP4
             if (window.player.videoType_ == sampleplayer.videoType.MP4) {
                 console.log("Loading MP4 stream");
-                //window.imageElement.onload = null;
-                //window.imageElement.removeAttribute('src');
-                //window.mediaElement.autoplay = autoplay || true;
-                //window.mediaElement.src = url || '';
-
                 window.mediaPlayer.unload();
-                /*
-                window.mediaHost = null;
-                window.mediaProtocol = null;
-                window.mediaPlayer = null;
-                */
-
                 window.mediaElement.src = url || '';
             }
             //If HLS
@@ -1092,6 +1082,9 @@
                 };
 
                 var protocol = null;
+
+
+                //For now, we
                 protocol = cast.player.api.CreateHlsStreamingProtocol(window.mediaHost);
                 /*
                 if (contentType.indexOf('livestream') == 0) {
@@ -1255,11 +1248,10 @@
         if(window.player.state_ != sampleplayer.State.SEEKING) {
 
 
-
             //TODO: Showing buffering state for pause event should only be done when we use
-            if (window.mediaPlayer.getState().underflow) {
+            if (window.mediaPlayer.getState().underflow && (window.player.videoType_ = sampleplayer.videoType.HLS)) {
                 // video is paused because of buffering
-                // handing buffering event here
+                // handing buffering event here for HLS streams
                 console.log("######### MEDIA ELEMENT Buffering");
                 setHudMessage('mediaElementState', 'Buffering');
 
@@ -1324,12 +1316,40 @@
 
     /** Buffering */
     window.mediaElement.addEventListener('waiting', function(e){
-        console.log("######### MEDIA ELEMENT WAITING");
-        setHudMessage('mediaElementState','Waiting');
-        //Not used with media player library
+        //console.log("######### MEDIA ELEMENT WAITING");
+        //setHudMessage('mediaElementState','Waiting');
 
-        //Playback has stopped because the next frame is not available, but the user agent expects that frame to become available in due course.
-        //This is what we want for buffering
+
+
+        if(window.player.videoType_ = sampleplayer.videoType.MP4) {
+
+            //Buffering for mp4 is handled here
+
+            console.log("######### MEDIA ELEMENT Buffering");
+            setHudMessage('mediaElementState', 'Buffering');
+
+            var controlPlayPause = window.player.element_.querySelector('.controls-play-pause');
+            var mediaInfo_ = window.player.element_.querySelector('.media-info');
+
+            if (window.player.state_ != sampleplayer.State.LOADING) {
+                //Buffer after 5 seconds
+                window.player.bufferTimeout_ = setTimeout(function () {
+
+                    window.player.setState_(sampleplayer.State.BUFFERING, false);
+
+                    window.player.isBuffering = true;
+                    window.player.fadeIn_(controlPlayPause, 0);
+
+                    //Fade in artwork 5 seconds after buffering
+                    window.player.bufferArtworkTimeout_ = setTimeout(function () {
+                        window.player.fadeIn_(mediaInfo_, 0.75)
+                    }, 5000);
+
+                }, 5000);
+            }
+
+        }
+
 
     });
 
