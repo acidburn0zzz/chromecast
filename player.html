@@ -1245,34 +1245,45 @@
 
 
             //TODO: Showing buffering state for pause event should only be done when we use
-            if (window.mediaPlayer.getState().underflow && (window.player.videoType_ = sampleplayer.videoType.HLS)) {
-                // video is paused because of buffering
-                // handing buffering event here for HLS streams
-                console.log("######### MEDIA ELEMENT Buffering");
-                setHudMessage('mediaElementState', 'Buffering');
+
+            if ((window.mediaPlayer !== null) && (window.player.videoType_ = sampleplayer.videoType.HLS)) {
+                if (window.mediaPlayer.getState().underflow) {
+                    // video is paused because of buffering
+                    // handing buffering event here for HLS streams
+                    /*
+                    console.log("######### MEDIA ELEMENT Buffering");
+                    setHudMessage('mediaElementState', 'Buffering');
 
 
-                var controlPlayPause = window.player.element_.querySelector('.controls-play-pause');
-                var mediaInfo_ = window.player.element_.querySelector('.media-info');
+                    var controlPlayPause = window.player.element_.querySelector('.controls-play-pause');
+                    var mediaInfo_ = window.player.element_.querySelector('.media-info');
 
-                if (window.player.state_ != sampleplayer.State.LOADING) {
-                    //Buffer after 5 seconds
-                    window.player.bufferTimeout_ = setTimeout(function () {
+                    if (window.player.state_ != sampleplayer.State.LOADING) {
+                        //Buffer after 5 seconds
+                        window.player.bufferTimeout_ = setTimeout(function () {
 
-                        window.player.setState_(sampleplayer.State.BUFFERING, false);
+                            window.player.setState_(sampleplayer.State.BUFFERING, false);
 
-                        window.player.isBuffering = true;
-                        window.player.fadeIn_(controlPlayPause, 0);
+                            window.player.isBuffering = true;
+                            window.player.fadeIn_(controlPlayPause, 0);
 
-                        //Fade in artwork 5 seconds after buffering
-                        window.player.bufferArtworkTimeout_ = setTimeout(function () {
-                            window.player.fadeIn_(mediaInfo_, 0.75)
+                            //Fade in artwork 5 seconds after buffering
+                            window.player.bufferArtworkTimeout_ = setTimeout(function () {
+                                window.player.fadeIn_(mediaInfo_, 0.75)
+                            }, 5000);
+
                         }, 5000);
+                    }
+                    */
+                    showBufferUI();
 
-                    }, 5000);
+                }else {
+
+                    showPauseUI();
                 }
-
-            } else {
+            }else {
+                showPauseUI();
+                /*
                 console.log("######### MEDIA ELEMENT Paused ");
                 setHudMessage('mediaElementState', 'Paused');
 
@@ -1306,9 +1317,76 @@
                         }, 5000);
                     }
                 }
+                */
             }
         }
     });
+
+    function showBufferUI() {
+
+        // video is paused because of buffering
+        // handing buffering event here for HLS streams
+        console.log("######### MEDIA ELEMENT Buffering");
+        setHudMessage('mediaElementState', 'Buffering');
+
+
+        var controlPlayPause = window.player.element_.querySelector('.controls-play-pause');
+        var mediaInfo_ = window.player.element_.querySelector('.media-info');
+
+        if (window.player.state_ != sampleplayer.State.LOADING) {
+            //Buffer after 5 seconds
+            window.player.bufferTimeout_ = setTimeout(function () {
+
+                window.player.setState_(sampleplayer.State.BUFFERING, false);
+
+                window.player.isBuffering = true;
+                window.player.fadeIn_(controlPlayPause, 0);
+
+                //Fade in artwork 5 seconds after buffering
+                window.player.bufferArtworkTimeout_ = setTimeout(function () {
+                    window.player.fadeIn_(mediaInfo_, 0.75)
+                }, 5000);
+
+            }, 5000);
+        }
+    }
+
+    function showPauseUI() {
+        console.log("######### MEDIA ELEMENT Paused ");
+        setHudMessage('mediaElementState', 'Paused');
+
+        // video is paused for the other reason.
+        clearTimeout(window.player.bufferTimeout_);
+        clearTimeout(window.player.bufferArtworkTimeout_);
+
+        var mediaInfo_ = window.player.element_.querySelector('.media-info');
+        var controlCurTime = window.player.element_.querySelector('.controls-cur-time');
+        var controlTotalTime = window.player.element_.querySelector('.controls-total-time');
+        var controlTotalProgress = window.player.element_.querySelector('.controls-progress');
+        var controlPlayPause = window.player.element_.querySelector('.controls-play-pause');
+
+        if (window.player.state_ != sampleplayer.State.DONE) {
+
+            if (window.player.state_ != sampleplayer.State.SEEKING) {
+                clearTimeout(window.player.fadeTimeout_);
+                window.player.setState_(sampleplayer.State.PAUSED, false);
+
+                window.player.fadeIn_(mediaInfo_, 0);
+                window.player.fadeIn_(controlCurTime, 0);
+                window.player.fadeIn_(controlTotalTime, 0);
+                window.player.fadeIn_(controlTotalProgress, 0);
+                window.player.fadeIn_(controlPlayPause, 0);
+
+                window.player.fadeTimeout_ = setTimeout(function () {
+                    window.player.fadeOut_(mediaInfo_, 0.75);
+                    window.player.fadeOut_(controlCurTime, 0.75);
+                    window.player.fadeOut_(controlTotalTime, 0.75);
+                    window.player.fadeOut_(controlTotalProgress, 0.75);
+                }, 5000);
+            }
+        }
+
+    }
 
     /** Buffering */
     window.mediaElement.addEventListener('waiting', function(e){
@@ -1320,7 +1398,7 @@
         if(window.player.videoType_ = sampleplayer.videoType.MP4) {
 
             //Buffering for mp4 is handled here
-
+            /*
             console.log("######### MEDIA ELEMENT Buffering");
             setHudMessage('mediaElementState', 'Buffering');
 
@@ -1343,6 +1421,9 @@
 
                 }, 5000);
             }
+            */
+
+            showPauseUI();
 
         }
 
