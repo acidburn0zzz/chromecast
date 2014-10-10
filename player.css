@@ -153,10 +153,10 @@ body {
     font-family: Helvetica;
     width: 90%;
     line-height: 1.4;
-    max-height: 224; /*45 %*/
+    max-height: 224px; /*45 %*/
+    float: left;
     overflow: hidden;
     text-overflow: ellipsis;
-    float: left;
 }
 
 #idle-time {
