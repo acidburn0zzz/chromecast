@@ -202,8 +202,8 @@
         //setTimeout(function() {
 
 
-                    $.getJSON('http://sophora-qs-www.br.de/system/halTocJson.jsp', function(json) {
-                    //$.getJSON('http://www.br.de/system/halTocJson.jsp', function(json) {
+                    //$.getJSON('http://sophora-qs-www.br.de/system/halTocJson.jsp', function(json) {
+                    $.getJSON('http://www.br.de/system/halTocJson.jsp', function(json) {
 
                         var tocURL = json.medcc.version["1"].href;
                         console.log('TOC url:' + tocURL);
@@ -387,6 +387,8 @@
      */
     sampleplayer.CastPlayer.prototype.onIdle_ = function() {
         //console.log('onIdle');
+
+        sampleplayer.fetchJson_();
 
         if (this.state_ != sampleplayer.State.IDLE) {
             $(window.player.idleBoxElement_).fadeIn(800, function() {
@@ -968,10 +970,11 @@
         setHudMessage('mediaManagerMessage', 'LOAD ' + JSON.stringify(event));
 
         //sampleplayer.fetchJson_();
-
+        /*
         $.getJSON("startpage.json", function(json) {
             sampleplayer.parseJson_(json);
         });
+        */
 
         var self = window.player;
 
