@@ -1244,37 +1244,14 @@
         if(window.player.state_ != sampleplayer.State.SEEKING) {
 
 
-            //TODO: Showing buffering state for pause event should only be done when we use
-
             if ((window.mediaPlayer !== null) && (window.player.videoType_ = sampleplayer.videoType.HLS)) {
+                //If we are casting adaptive streams we have to determine buffering state by looking at player underflow
+                //Buffering for MP4 is determined in waiting event
                 if (window.mediaPlayer.getState().underflow) {
+                    console.log("######### HLS Buffering #######");
                     // video is paused because of buffering
                     // handing buffering event here for HLS streams
-                    /*
-                    console.log("######### MEDIA ELEMENT Buffering");
-                    setHudMessage('mediaElementState', 'Buffering');
 
-
-                    var controlPlayPause = window.player.element_.querySelector('.controls-play-pause');
-                    var mediaInfo_ = window.player.element_.querySelector('.media-info');
-
-                    if (window.player.state_ != sampleplayer.State.LOADING) {
-                        //Buffer after 5 seconds
-                        window.player.bufferTimeout_ = setTimeout(function () {
-
-                            window.player.setState_(sampleplayer.State.BUFFERING, false);
-
-                            window.player.isBuffering = true;
-                            window.player.fadeIn_(controlPlayPause, 0);
-
-                            //Fade in artwork 5 seconds after buffering
-                            window.player.bufferArtworkTimeout_ = setTimeout(function () {
-                                window.player.fadeIn_(mediaInfo_, 0.75)
-                            }, 5000);
-
-                        }, 5000);
-                    }
-                    */
                     showBufferUI();
 
                 }else {
@@ -1283,41 +1260,7 @@
                 }
             }else {
                 showPauseUI();
-                /*
-                console.log("######### MEDIA ELEMENT Paused ");
-                setHudMessage('mediaElementState', 'Paused');
 
-                // video is paused for the other reason.
-                clearTimeout(window.player.bufferTimeout_);
-                clearTimeout(window.player.bufferArtworkTimeout_);
-
-                var mediaInfo_ = window.player.element_.querySelector('.media-info');
-                var controlCurTime = window.player.element_.querySelector('.controls-cur-time');
-                var controlTotalTime = window.player.element_.querySelector('.controls-total-time');
-                var controlTotalProgress = window.player.element_.querySelector('.controls-progress');
-                var controlPlayPause = window.player.element_.querySelector('.controls-play-pause');
-
-                if (window.player.state_ != sampleplayer.State.DONE) {
-
-                    if (window.player.state_ != sampleplayer.State.SEEKING) {
-                        clearTimeout(window.player.fadeTimeout_);
-                        window.player.setState_(sampleplayer.State.PAUSED, false);
-
-                        window.player.fadeIn_(mediaInfo_, 0);
-                        window.player.fadeIn_(controlCurTime, 0);
-                        window.player.fadeIn_(controlTotalTime, 0);
-                        window.player.fadeIn_(controlTotalProgress, 0);
-                        window.player.fadeIn_(controlPlayPause, 0);
-
-                        window.player.fadeTimeout_ = setTimeout(function () {
-                            window.player.fadeOut_(mediaInfo_, 0.75);
-                            window.player.fadeOut_(controlCurTime, 0.75);
-                            window.player.fadeOut_(controlTotalTime, 0.75);
-                            window.player.fadeOut_(controlTotalProgress, 0.75);
-                        }, 5000);
-                    }
-                }
-                */
             }
         }
     });
@@ -1422,6 +1365,8 @@
                 }, 5000);
             }
             */
+
+            console.log("######### MP4 Buffering #######");
 
             showPauseUI();
 
