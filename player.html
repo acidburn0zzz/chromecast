@@ -972,13 +972,6 @@
         console.log("### Media Manager - LOAD: " + JSON.stringify(event));
         setHudMessage('mediaManagerMessage', 'LOAD ' + JSON.stringify(event));
 
-        //sampleplayer.fetchJson_();
-        /*
-        $.getJSON("startpage.json", function(json) {
-            sampleplayer.parseJson_(json);
-        });
-        */
-
         var self = window.player;
 
         var mediaInfo_ = self.element_.querySelector('.media-info');
@@ -1130,7 +1123,7 @@
      * internationalization rules as may be displayed by the sender application.
      * @type {string|undefined}
      **/
-    appConfig.statusText = 'Ready to play';
+    appConfig.statusText = 'Bereit zum Abspielen';
 
     /**
      * Maximum time in seconds before closing an idle
