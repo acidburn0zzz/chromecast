@@ -1101,8 +1101,8 @@
                     //TODO: fix so that livestreams starts at infinite number starting time
                     if (streamType == 1) {
                         console.log('####### Casting livestream');
-                        //window.mediaPlayer.load(protocol, Number.POSITIVE_INFINITY);
-                        window.mediaPlayer.load(protocol, initialTimeIndexSeconds);
+                        window.mediaPlayer.load(protocol, Number.POSITIVE_INFINITY);
+                        //window.mediaPlayer.load(protocol, initialTimeIndexSeconds);
                     } else {
                         console.log('####### Casting VOD');
                         window.mediaPlayer.load(protocol, initialTimeIndexSeconds);
