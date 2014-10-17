@@ -1099,7 +1099,7 @@
                     window.mediaPlayer = new cast.player.api.Player(window.mediaHost);
 
                     //TODO: fix so that livestreams starts at infinite number starting time
-                    if (self.livestream) {
+                    if (window.player.isLivestream_) {
                         console.log('####### Casting livestream');
                         window.mediaPlayer.load(protocol, Number.POSITIVE_INFINITY);
                         //window.mediaPlayer.load(protocol, initialTimeIndexSeconds);
