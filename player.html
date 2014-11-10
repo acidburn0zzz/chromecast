@@ -1285,9 +1285,12 @@
             //Buffer after 5 seconds
             window.player.bufferTimeout_ = setTimeout(function () {
 
-                window.player.setState_(sampleplayer.State.BUFFERING, false);
+                if (window.player.state_ != sampleplayer.State.STALLED) {
+                    window.player.setState_(sampleplayer.State.BUFFERING, false);
 
-                window.player.isBuffering = true;
+                    //window.player.isBuffering = true;
+                }
+
                 window.player.fadeIn_(controlPlayPause, 0);
 
                 //Fade in artwork 5 seconds after buffering
