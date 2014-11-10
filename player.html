@@ -1033,6 +1033,19 @@
         var contentId = sampleplayer.getValue_(event.data, ['media', 'contentId']); //url
         var contentType = sampleplayer.getValue_(event.data, ['media', 'contentType']); //mimetype & livestream
         var streamType = event.data.media.streamType;
+
+        if(contentType.indexOf('livestream') == 0) {
+
+            if (window.mediaPlayer !== null) {
+
+                window.mediaPlayer.unload();
+
+
+            }
+            window.mediaManager.sendLoadError();
+            mediaManager.resetMediaElement(cast.receiver.media.IdleReason.ERROR);
+            return;
+        }
         self.setContentType_(contentType);
 
         self.setState_(sampleplayer.State.LOADING, false);
