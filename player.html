@@ -1034,18 +1034,7 @@
         var contentType = sampleplayer.getValue_(event.data, ['media', 'contentType']); //mimetype & livestream
         var streamType = event.data.media.streamType;
 
-        if(contentType.indexOf('livestream') == 0) {
 
-            if (window.mediaPlayer !== null) {
-
-                window.mediaPlayer.unload();
-
-
-            }
-            window.mediaManager.sendLoadError();
-            mediaManager.resetMediaElement(cast.receiver.media.IdleReason.ERROR);
-            return;
-        }
         self.setContentType_(contentType);
 
         self.setState_(sampleplayer.State.LOADING, false);
@@ -1143,8 +1132,21 @@
                     //TODO: fix so that livestreams starts at infinite number starting time
                     if (window.player.isLivestream_) {
                         console.log('####### Casting livestream');
-                        window.mediaPlayer.load(protocol, Number.POSITIVE_INFINITY);
+                        //window.mediaPlayer.load(protocol, Number.POSITIVE_INFINITY);
                         //window.mediaPlayer.load(protocol, initialTimeIndexSeconds);
+
+                        //if(contentType.indexOf('livestream') == 0) {
+
+                            if (window.mediaPlayer !== null) {
+
+                                window.mediaPlayer.unload();
+
+
+                            }
+                            window.mediaManager.sendLoadError();
+                            mediaManager.resetMediaElement(cast.receiver.media.IdleReason.ERROR);
+                            //return;
+                        //}
                     } else {
                         console.log('####### Casting VOD');
                         window.mediaPlayer.load(protocol, initialTimeIndexSeconds);
