@@ -402,6 +402,20 @@
         if (this.state_ != sampleplayer.State.IDLE) {
             $(window.player.idleBoxElement_).fadeIn(800, function() {
                 player.startIdleSlider_(); // start the timer after fade in
+
+                if(this.state_ == sampleplayer.State.STALLED){
+                    //window.mediaManager.sendError(senderId, requestId, type, opt_reason, opt_customData)
+                    if (window.mediaPlayer !== null) {
+
+                        window.mediaPlayer.unload();
+
+                        //mediaManager.resetMediaElement(cast.receiver.media.IdleReason.ERROR);
+                        mediaManager.resetMediaElement();
+                    }
+                }
+
+
+
             });
             this.setState_(sampleplayer.State.IDLE, true);
         } else {
