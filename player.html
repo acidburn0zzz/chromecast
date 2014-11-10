@@ -1163,14 +1163,16 @@
                         //mediaManager.resetMediaElement(cast.receiver.media.IdleReason.ERROR);
                         //return;
 
-                        /*
-                         if (window.mediaPlayer !== null) {
 
-                         window.mediaPlayer.unload();
+                         if (window.mediaPlayer !== null) {
+                             window.mediaManager.sendLoadError();
+                             mediaManager.resetMediaElement(cast.receiver.media.IdleReason.ERROR);
+                             window.mediaPlayer.unload();
+                             window.player.setState_(sampleplayer.State.DONE, false);
 
 
                          }
-                         */
+
                         //window.mediaManager.sendLoadError();
                         //window.mediaPlayer.unload();
                         //mediaManager.resetMediaElement(cast.receiver.media.IdleReason.ERROR);
