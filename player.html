@@ -555,8 +555,8 @@
      * NONE
      **/
 
-    cast.receiver.logger.setLevelValue(cast.receiver.LoggerLevel.DEBUG);
-    cast.player.api.setLoggerLevel(cast.player.api.LoggerLevel.DEBUG);
+    //cast.receiver.logger.setLevelValue(cast.receiver.LoggerLevel.DEBUG);
+    //cast.player.api.setLoggerLevel(cast.player.api.LoggerLevel.DEBUG);
 
     window.castReceiverManager = cast.receiver.CastReceiverManager.getInstance();
 
@@ -623,12 +623,9 @@
                 }
             }
         }
-
-        //If last sender explicity disconnects, turn off
-        if(senders.length == 0 && event.reason == cast.receiver.system.DisconnectReason.REQUESTED_BY_SENDER && window.player.idleSenders_.lenght == 0) {
-            window.close();
-        }
         */
+
+
 
         //If last sender explicity disconnects, turn off
         if(senders.length == 0 && event.reason == cast.receiver.system.DisconnectReason.REQUESTED_BY_SENDER) {
