@@ -1384,6 +1384,9 @@
         console.log("######### MEDIA ELEMENT STALLED");
         //setHudMessage('mediaElementState','Stalled');
         //Not used with media player library
+
+        self.setState_(sampleplayer.State.STALLED, false);
+        showPauseUI();
     });
 
     window.mediaElement.addEventListener('progress', function(e){
