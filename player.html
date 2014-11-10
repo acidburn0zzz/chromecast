@@ -239,6 +239,9 @@
         var teasersArray = json._embedded.teasers;
         data = [];
         $.each(teasersArray, function(i, teaser ) {
+            if(teaser["documentProperties"]["jcr:primaryType:"] == "br-core-nt:liveDashboard") {
+                continue;
+            }
             var title = teaser.topline;
             var subtitle = teaser.headline;
             var description = teaser.teaserText;
