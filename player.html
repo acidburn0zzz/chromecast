@@ -1257,6 +1257,23 @@
         console.log("######### MEDIA ELEMENT CAN PLAY");
         //setHudMessage('mediaElementState','Can Play');
 
+        if (window.player.isLivestream_) {
+            console.log('####### Casting livestream');
+            //window.mediaPlayer.load(protocol, Number.POSITIVE_INFINITY);
+            //window.mediaPlayer.load(protocol, initialTimeIndexSeconds);
+
+
+            //if (window.mediaPlayer !== null) {
+
+
+            //}
+
+            window.mediaManager.sendLoadError();
+            window.mediaPlayer.unload();
+            mediaManager.resetMediaElement(cast.receiver.media.IdleReason.ERROR);
+            //return;
+        }
+
 
     });
     window.mediaElement.addEventListener('ended', function(e){
