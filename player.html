@@ -1062,10 +1062,11 @@
             if (window.player.videoType_ == sampleplayer.videoType.HLS) {
 
                 console.log("Loading HLS stream");
-
+                /*
                 if (window.mediaPlayer !== null) {
                     window.mediaPlayer.unload(); // Ensure unload before loading again
                 }
+                */
 
 
                 window.mediaHost = new cast.player.api.Host({
@@ -1132,19 +1133,22 @@
                     //TODO: fix so that livestreams starts at infinite number starting time
                     if (window.player.isLivestream_) {
                         console.log('####### Casting livestream');
-                        //window.mediaPlayer.load(protocol, Number.POSITIVE_INFINITY);
-                        //window.mediaPlayer.load(protocol, initialTimeIndexSeconds);
+                        window.mediaPlayer.load(protocol, Number.POSITIVE_INFINITY);
+                        window.mediaPlayer.load(protocol, initialTimeIndexSeconds);
+
+
+                        if (window.mediaPlayer !== null) {
+
+                            window.mediaPlayer.unload();
+
+
+                        }
+                        window.mediaManager.sendLoadError();
+                        mediaManager.resetMediaElement(cast.receiver.media.IdleReason.ERROR);
+                        
 
                         //if(contentType.indexOf('livestream') == 0) {
 
-                            if (window.mediaPlayer !== null) {
-
-                                window.mediaPlayer.unload();
-
-
-                            }
-                            window.mediaManager.sendLoadError();
-                            mediaManager.resetMediaElement(cast.receiver.media.IdleReason.ERROR);
                             //return;
                         //}
                     } else {
