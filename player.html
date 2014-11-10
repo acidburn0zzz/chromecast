@@ -1136,19 +1136,19 @@
                         window.mediaPlayer.load(protocol, Number.POSITIVE_INFINITY);
                         //window.mediaPlayer.load(protocol, initialTimeIndexSeconds);
 
-                         /*
-                        if (window.mediaPlayer !== null) {
 
-                            window.mediaPlayer.unload();
+                        /*
+                         if (window.mediaPlayer !== null) {
+
+                         window.mediaPlayer.unload();
 
 
-                        }
-                        */
+                         }
+                         */
                         window.mediaManager.sendLoadError();
-                        window.mediaPlayer.unload();
-                        mediaManager.resetMediaElement(cast.receiver.media.IdleReason.ERROR);
-                        window.player.setState_(sampleplayer.State.DONE, false);
-
+                        //window.mediaPlayer.unload();
+                        //mediaManager.resetMediaElement(cast.receiver.media.IdleReason.ERROR);
+                        //window.player.setState_(sampleplayer.State.DONE, false);
 
 
                         //if(contentType.indexOf('livestream') == 0) {
