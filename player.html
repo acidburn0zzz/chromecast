@@ -240,7 +240,7 @@
         data = [];
         $.each(teasersArray, function(i, teaser ) {
             var properties = teaser["documentProperties"];
-            var type = properties["jcr:primaryType:"];
+            var type = properties["jcr:primaryType"];
             if(type === "br-core-nt:liveDashboard") {
                 return true;
             }
