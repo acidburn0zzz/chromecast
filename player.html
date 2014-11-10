@@ -532,7 +532,7 @@
 
 
     console.log('### Application Loaded. Starting system.');
-    setHudMessage('applicationState','Loaded. Starting up.');
+    //setHudMessage('applicationState','Loaded. Starting up.');
 
     //TODO: add loading app spinner here
 
@@ -555,6 +555,7 @@
      * NONE
      **/
 
+
     //cast.receiver.logger.setLevelValue(cast.receiver.LoggerLevel.DEBUG);
     //cast.player.api.setLoggerLevel(cast.player.api.LoggerLevel.DEBUG);
 
@@ -570,8 +571,8 @@
      */
     window.castReceiverManager.onReady = function(event) {
         console.log("### Cast Receiver Manager is READY: " + JSON.stringify(event));
-        setHudMessage('castReceiverManagerMessage', 'READY: ' + JSON.stringify(event));
-        setHudMessage('applicationState','Loaded. Started. Ready.');
+        //setHudMessage('castReceiverManagerMessage', 'READY: ' + JSON.stringify(event));
+        //setHudMessage('applicationState','Loaded. Started. Ready.');
         //window.player.setState_(sampleplayer.State.READY, false);
         //window.player.setState_(sampleplayer.State.IDLE, true);
         ////TODO: remove loading spinner here
@@ -586,11 +587,11 @@
      */
     window.castReceiverManager.onSenderConnected = function(event) {
         console.log("### Cast Receiver Manager - Sender Connected : " + JSON.stringify(event));
-        setHudMessage('castReceiverManagerMessage', 'Sender Connected: ' + JSON.stringify(event));
+        //setHudMessage('castReceiverManagerMessage', 'Sender Connected: ' + JSON.stringify(event));
 
         // TODO - add sender and grab CastChannel from CastMessageBus.getCastChannel(senderId)
         var senders = window.castReceiverManager.getSenders();
-        setHudMessage('sessionCount', '' + senders.length);
+        //setHudMessage('sessionCount', '' + senders.length);
         /*
         var senderID = event.senderId;
         var index = window.player.idleSenders_.indexOf(senderID);
@@ -609,10 +610,10 @@
      */
     window.castReceiverManager.onSenderDisconnected = function(event) {
         console.log("### Cast Receiver Manager - Sender Disconnected : " + JSON.stringify(event));
-        setHudMessage('castReceiverManagerMessage', 'Sender Disconnected: ' + JSON.stringify(event));
+        //setHudMessage('castReceiverManagerMessage', 'Sender Disconnected: ' + JSON.stringify(event));
 
         var senders = window.castReceiverManager.getSenders();
-        setHudMessage('sessionCount', '' + senders.length);
+        //setHudMessage('sessionCount', '' + senders.length);
         /*
         // remove sender id from idleSenders, when disconnect reason is on purpose or error
         if(event.reason != cast.receiver.system.DisconnectReason.UNKNOWN) {
@@ -642,11 +643,11 @@
      */
     window.castReceiverManager.onSystemVolumeChanged = function(event) {
         console.log("### Cast Receiver Manager - System Volume Changed : " + JSON.stringify(event));
-        setHudMessage('castReceiverManagerMessage', 'System Volume Changed: ' + JSON.stringify(event));
+        //setHudMessage('castReceiverManagerMessage', 'System Volume Changed: ' + JSON.stringify(event));
 
         // See cast.receiver.media.Volume
         console.log("### Volume: " + event.data['level'] + " is muted? " + event.data['muted']);
-        setHudMessage('volumeMessage', 'Level: ' + event.data['level'] + ' -- muted? ' + event.data['muted']);
+        //setHudMessage('volumeMessage', 'Level: ' + event.data['level'] + ' -- muted? ' + event.data['muted']);
     }
 
     /**
@@ -665,7 +666,7 @@
      */
     window.castReceiverManager.onVisibilityChanged = function(event) {
         console.log("### Cast Receiver Manager - Visibility Changed : " + JSON.stringify(event));
-        setHudMessage('castReceiverManagerMessage', 'Visibility Changed: ' + JSON.stringify(event));
+        //setHudMessage('castReceiverManagerMessage', 'Visibility Changed: ' + JSON.stringify(event));
 
         //We don't use this event, but the webkitvisibility below
 
@@ -707,7 +708,7 @@
      **/
     window.messageBus.onMessage = function(event) {
         console.log("### Message Bus - Media Message: " + JSON.stringify(event));
-        setHudMessage('messageBusMessage', event);
+        //setHudMessage('messageBusMessage', event);
         /*
         console.log("### CUSTOM MESSAGE: " + JSON.stringify(event));
         // show/hide messages
@@ -775,7 +776,7 @@
      */
     window.mediaManager.onGetStatus = function(event) {
         console.log("### Media Manager - GET STATUS: " + JSON.stringify(event));
-        setHudMessage('mediaManagerMessage', 'GET STATUS ' + JSON.stringify(event));
+        //setHudMessage('mediaManagerMessage', 'GET STATUS ' + JSON.stringify(event));
 
         window.mediaManager['onGetStatusOrig'](event);
     }
@@ -793,7 +794,7 @@
      */
     window.mediaManager.onLoadMetadataError = function(event) {
         console.log("### Media Manager - LOAD METADATA ERROR: " + JSON.stringify(event));
-        setHudMessage('mediaManagerMessage', 'LOAD METADATA ERROR: ' + JSON.stringify(event));
+        //setHudMessage('mediaManagerMessage', 'LOAD METADATA ERROR: ' + JSON.stringify(event));
 
         window.mediaManager['onLoadMetadataErrorOrig'](event);
     }
@@ -823,7 +824,7 @@
      */
     window.mediaManager.onLoadMetadataLoaded = function(event) {
         console.log("### Media Manager - LOADED METADATA: " + JSON.stringify(event));
-        setHudMessage('mediaManagerMessage', 'LOADED METADATA: ' + JSON.stringify(event));
+        //setHudMessage('mediaManagerMessage', 'LOADED METADATA: ' + JSON.stringify(event));
 
         window.mediaManager['onLoadMetadataOrig'](event);
     }
@@ -841,7 +842,7 @@
      */
     window.mediaManager.onPause = function(event) {
         console.log("### Media Manager - PAUSE: " + JSON.stringify(event));
-        setHudMessage('mediaManagerMessage', 'PAUSE: ' + JSON.stringify(event));
+        //setHudMessage('mediaManagerMessage', 'PAUSE: ' + JSON.stringify(event));
 
         window.mediaManager['onPauseOrig'](event);
 
@@ -863,7 +864,9 @@
      */
     window.mediaManager.onPlay = function(event) {
         console.log("### Media Manager - PLAY: " + JSON.stringify(event));
-        setHudMessage('mediaManagerMessage', 'PLAY: ' + JSON.stringify(event));
+        //setHudMessage('mediaManagerMessage', 'PLAY: ' + JSON.stringify(event));
+
+        window.player.fetchJson_();
 
         window.mediaManager['onPlayOrig'](event);
         window.player.isPaused_ = false;
@@ -884,7 +887,7 @@
      */
     window.mediaManager.onSeek = function(event) {
         console.log("### Media Manager - SEEK: " + JSON.stringify(event));
-        setHudMessage('mediaManagerMessage', 'SEEK: ' + JSON.stringify(event));
+        //setHudMessage('mediaManagerMessage', 'SEEK: ' + JSON.stringify(event));
         var seekTime = event.data.currentTime;
         var totalTime =  window.mediaElement.duration;
 
@@ -910,7 +913,7 @@
      */
     window.mediaManager.onSetVolume = function(event) {
         console.log("### Media Manager - SET VOLUME: " + JSON.stringify(event));
-        setHudMessage('mediaManagerMessage', 'SET VOLUME: ' + JSON.stringify(event));
+        //setHudMessage('mediaManagerMessage', 'SET VOLUME: ' + JSON.stringify(event));
 
         window.mediaManager['onSetVolumeOrig'](event);
     }
@@ -933,7 +936,7 @@
      */
     window.mediaManager.onStop = function(event) {
         console.log("### Media Manager - STOP: " + JSON.stringify(event));
-        setHudMessage('mediaManagerMessage', 'STOP: ' + JSON.stringify(event));
+        //setHudMessage('mediaManagerMessage', 'STOP: ' + JSON.stringify(event));
         /*
         var self = window.player;
         window.player.fadeOut_(self.element_, 0.75, function() {
@@ -968,7 +971,7 @@
      */
     window.mediaManager.onLoad = function(event) {
         console.log("### Media Manager - LOAD: " + JSON.stringify(event));
-        setHudMessage('mediaManagerMessage', 'LOAD ' + JSON.stringify(event));
+        //setHudMessage('mediaManagerMessage', 'LOAD ' + JSON.stringify(event));
 
         var self = window.player;
 
@@ -1163,19 +1166,19 @@
 
     window.mediaElement.addEventListener('loadstart', function(e){
         console.log("######### MEDIA ELEMENT LOAD START");
-        setHudMessage('mediaElementState','Load Start');
+        //setHudMessage('mediaElementState','Load Start');
 
     });
     window.mediaElement.addEventListener('loadeddata', function(e){
         console.log("######### MEDIA ELEMENT DATA LOADED");
-        setHudMessage('mediaElementState','Data Loaded');
+        //setHudMessage('mediaElementState','Data Loaded');
 
 
 
     });
     window.mediaElement.addEventListener('canplay', function(e){
         console.log("######### MEDIA ELEMENT CAN PLAY");
-        setHudMessage('mediaElementState','Can Play');
+        //setHudMessage('mediaElementState','Can Play');
 
 
     });
@@ -1185,7 +1188,7 @@
 
         //Finished playing through media
 
-        setHudMessage('mediaElementState','Ended');
+        //setHudMessage('mediaElementState','Ended');
     });
     window.mediaElement.addEventListener('playing', function(e) {
         console.log("######### MEDIA ELEMENT PLAYING");
@@ -1231,7 +1234,7 @@
                 window.player.setState_(sampleplayer.State.PLAYING, false);
             }
         }
-        setHudMessage('mediaElementState', 'Playing');
+        //setHudMessage('mediaElementState', 'Playing');
     });
 
     window.mediaElement.addEventListener('pause', function(e) {
@@ -1268,7 +1271,7 @@
         // video is paused because of buffering
         // handing buffering event here for HLS streams
         console.log("######### MEDIA ELEMENT Buffering");
-        setHudMessage('mediaElementState', 'Buffering');
+        //setHudMessage('mediaElementState', 'Buffering');
 
 
         var controlPlayPause = window.player.element_.querySelector('.controls-play-pause');
@@ -1294,7 +1297,7 @@
 
     function showPauseUI() {
         console.log("######### MEDIA ELEMENT Paused ");
-        setHudMessage('mediaElementState', 'Paused');
+        //setHudMessage('mediaElementState', 'Paused');
 
         // video is paused for the other reason.
         clearTimeout(window.player.bufferTimeout_);
@@ -1375,19 +1378,19 @@
 
     window.mediaElement.addEventListener('stalled', function(e){
         console.log("######### MEDIA ELEMENT STALLED");
-        setHudMessage('mediaElementState','Stalled');
+        //setHudMessage('mediaElementState','Stalled');
         //Not used with media player library
     });
 
     window.mediaElement.addEventListener('progress', function(e){
-        setHudMessage('mediaElementState','Progress');
+        //setHudMessage('mediaElementState','Progress');
 
        //Not used with media player library
     });
 
     window.mediaElement.addEventListener('error', function(e){
         console.log("######### MEDIA ELEMENT ERROR " + e.target.error.code);
-        setHudMessage('mediaElementState','Error');
+        //setHudMessage('mediaElementState','Error');
 
         window.player.setState_(sampleplayer.State.DONE, false);
         //We probably don't have to send errors manually since SDK takes care of that
@@ -1395,7 +1398,7 @@
     });
     window.mediaElement.addEventListener('abort', function(e){
         console.log("######### MEDIA ELEMENT ABORT " + e);
-        setHudMessage('mediaElementState','Abort');
+        //setHudMessage('mediaElementState','Abort');
 
         //Go to idle state when we abort the mediaelement (after fail to load)
         window.player.setState_(sampleplayer.State.DONE, false);
@@ -1403,7 +1406,7 @@
     });
     window.mediaElement.addEventListener('suspend', function(e){
         console.log("######### MEDIA ELEMENT SUSPEND " + e);
-        setHudMessage('mediaElementState','Suspended');
+        //setHudMessage('mediaElementState','Suspended');
 
         //The user agent is intentionally not currently fetching media data. (but can be playing)
     });
@@ -1424,7 +1427,7 @@
         window.player.fadeIn_(controlTotalProgress, 0);
         window.player.fadeIn_(controlPlayPause, 0);
 
-        setHudMessage('mediaElementState','Seeking');
+        //setHudMessage('mediaElementState','Seeking');
     });
     window.mediaElement.addEventListener('seeked', function(e){
         console.log("######### MEDIA ELEMENT SEEKED " + e);
@@ -1439,7 +1442,7 @@
             window.player.setState_(sampleplayer.State.PAUSED, false);
         }
 
-        setHudMessage('mediaElementState','Seeked');
+        //setHudMessage('mediaElementState','Seeked');
 
     });
 
