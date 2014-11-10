@@ -202,7 +202,7 @@ body {
   overflow: hidden !important;
 }
 
-.player.image img, .player.video.buffering video,
+.player.image img, .player.video.buffering video, .player.video.stalled video,
 .player.video.playing video, .player.video.paused video,
 .player.video.seeking video{
   display: block;
@@ -310,9 +310,9 @@ body {
 /* Media Info                                        */
 /* ------------------------------------------------- */
 
-.player.audio.buffering .overlay, .player.audio.loading .overlay,
+.player.audio.buffering .overlay, .player.audio.stalled .overlay, .player.audio.buffering .overlay, .player.audio.loading .overlay,
 .player.audio.paused .overlay, .player.audio.playing .overlay,
-.player.audio.seeking .overlay, .player.video.buffering .overlay,
+.player.audio.seeking .overlay, .player.video.buffering .overlay, .player.video.stalled .overlay,
 .player.video.loading .overlay, .player.video.paused .overlay,
 .player.video.seeking .overlay, .player.video.playing .overlay {
   display: block;
@@ -409,6 +409,7 @@ body {
 }
 /** Show spinner on buffering and seeking */
 .player.buffering .controls-play-pause,
+.player.stalled .controls-play-pause,
 .player.seeking .controls-play-pause,
 .player.loading .controls-play-pause{
     width: 20px;
