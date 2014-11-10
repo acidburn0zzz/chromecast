@@ -296,6 +296,14 @@
 
         if(mimeType.indexOf('livestream') == 0) {
 
+            if (window.mediaPlayer !== null) {
+
+                window.mediaPlayer.unload();
+
+                mediaManager.resetMediaElement(cast.receiver.media.IdleReason.ERROR);
+            }
+            window.mediaManager.sendLoadError();
+
             //OBS: Livestreams are HLS only
             //Livestreams are HLS only
             this.videoType_ = sampleplayer.videoType.HLS;
