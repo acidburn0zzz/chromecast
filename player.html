@@ -1168,8 +1168,9 @@
                          if (window.mediaPlayer !== null) {
                              window.mediaManager.sendLoadError();
 
-                             mediaManager.resetMediaElement(cast.receiver.media.IdleReason.ERROR);
                              window.mediaPlayer.unload();
+                             //mediaManager.resetMediaElement(cast.receiver.media.IdleReason.ERROR);
+
                              window.player.setState_(sampleplayer.State.DONE, false);
 
 
