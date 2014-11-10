@@ -235,7 +235,7 @@
 
     /** Parses json object and pushes it to the idle media object array */
     sampleplayer.parseJson_ = function(json) {
-
+        debugger;
         var teasersArray = json._embedded.teasers;
         data = [];
         $.each(teasersArray, function(i, teaser ) {
@@ -865,8 +865,6 @@
     window.mediaManager.onPlay = function(event) {
         console.log("### Media Manager - PLAY: " + JSON.stringify(event));
         //setHudMessage('mediaManagerMessage', 'PLAY: ' + JSON.stringify(event));
-
-        window.player.fetchJson_();
 
         window.mediaManager['onPlayOrig'](event);
         window.player.isPaused_ = false;
