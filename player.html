@@ -148,7 +148,6 @@
         this.description = description;
         this.tag = tag;
         this.imageURL = imageURL;
-        /*this.imageURL = "http://media-cache-ec0.pinimg.com/236x/7f/75/6b/7f756bcb3481db56650768cc5fc0cf50.jpg";*/
 
         return this;
     };
@@ -172,8 +171,6 @@
 
 
         this.isPaused_;
-
-        this.idleSenders_ = [];
 
         this.mediaInfo_ = this.element_.querySelector('.media-info');
 
@@ -199,10 +196,10 @@
     };
 
     sampleplayer.fetchJson_ = function() {
-        //setTimeout(function() {
 
 
-                    //$.getJSON('http://sophora-qs-www.br.de/system/halTocJson.jsp', function(json) {
+
+
                     $.getJSON('http://www.br.de/system/halTocJson.jsp', function(json) {
 
                         var tocURL = json.medcc.version["1"].href;
@@ -223,14 +220,8 @@
                         });
 
                     });
- //               }(), 10000); // test to see what happens if the json takes 10 seconds to load
 
-    /*
-        $.getJSON('startpage.json', function(json) {
-            //console.log(json);
-            var test = sampleplayer.parseJson_(json);
-        });
-    */
+
     };
 
     /** Parses json object and pushes it to the idle media object array */
@@ -296,27 +287,12 @@
 
         if(mimeType.indexOf('livestream') == 0) {
 
-            /*
-            if (window.mediaPlayer !== null) {
 
-                window.mediaPlayer.unload();
-
-                mediaManager.resetMediaElement(cast.receiver.media.IdleReason.ERROR);
-            }
-            window.mediaManager.sendLoadError();
-            */
             //OBS: Livestreams are HLS only
             //Livestreams are HLS only
             this.videoType_ = sampleplayer.videoType.HLS;
             this.type_ = sampleplayer.Type.VIDEO;
             this.isLivestream_ = true;
-            /*
-            var controlTotalTime = window.mediaElement.querySelector('.controls-total-time');
-            var controlTotalProgress = window.mediaElement.querySelector('.controls-progress');
-
-            controlTotalTime.style.display = 'none';
-            controlTotalProgress.style.display = 'none';
-            */
 
             $(".controls-cur-time").text('Live');
             $(".controls-total-time").hide();
@@ -410,7 +386,7 @@
 
         if (this.state_ != sampleplayer.State.IDLE) {
             if(this.state_ == sampleplayer.State.STALLED){
-                //window.mediaManager.sendError(senderId, requestId, type, opt_reason, opt_customData)
+
                 if (window.mediaPlayer !== null) {
 
                     window.mediaPlayer.unload();
@@ -422,10 +398,6 @@
 
             $(window.player.idleBoxElement_).fadeIn(800, function() {
                 player.startIdleSlider_(); // start the timer after fade in
-
-
-
-
 
             });
             this.setState_(sampleplayer.State.IDLE, true);
@@ -565,8 +537,6 @@
     console.log('### Application Loaded. Starting system.');
     //setHudMessage('applicationState','Loaded. Starting up.');
 
-    //TODO: add loading app spinner here
-
     /**
      * Sets the log verbosity level.
      *
@@ -587,8 +557,8 @@
      **/
 
 
-    cast.receiver.logger.setLevelValue(cast.receiver.LoggerLevel.DEBUG);
-    cast.player.api.setLoggerLevel(cast.player.api.LoggerLevel.DEBUG);
+    //cast.receiver.logger.setLevelValue(cast.receiver.LoggerLevel.DEBUG);
+    //cast.player.api.setLoggerLevel(cast.player.api.LoggerLevel.DEBUG);
 
     window.castReceiverManager = cast.receiver.CastReceiverManager.getInstance();
 
@@ -604,9 +574,8 @@
         console.log("### Cast Receiver Manager is READY: " + JSON.stringify(event));
         //setHudMessage('castReceiverManagerMessage', 'READY: ' + JSON.stringify(event));
         //setHudMessage('applicationState','Loaded. Started. Ready.');
-        //window.player.setState_(sampleplayer.State.READY, false);
-        //window.player.setState_(sampleplayer.State.IDLE, true);
-        ////TODO: remove loading spinner here
+
+
     }
 
     /**
@@ -620,16 +589,9 @@
         console.log("### Cast Receiver Manager - Sender Connected : " + JSON.stringify(event));
         //setHudMessage('castReceiverManagerMessage', 'Sender Connected: ' + JSON.stringify(event));
 
-        // TODO - add sender and grab CastChannel from CastMessageBus.getCastChannel(senderId)
         var senders = window.castReceiverManager.getSenders();
         //setHudMessage('sessionCount', '' + senders.length);
-        /*
-        var senderID = event.senderId;
-        var index = window.player.idleSenders_.indexOf(senderID);
-        if(window.player.idleSenders_.indexOf(senderID) === -1) {
-            window.player.idleSenders_.push(senderID);
-        }
-        */
+
     }
 
     /**
@@ -645,18 +607,6 @@
 
         var senders = window.castReceiverManager.getSenders();
         //setHudMessage('sessionCount', '' + senders.length);
-        /*
-        // remove sender id from idleSenders, when disconnect reason is on purpose or error
-        if(event.reason != cast.receiver.system.DisconnectReason.UNKNOWN) {
-            for (var i = window.player.idleSenders_.length-1; i>=0; i--) {
-                if (window.player.idleSenders_[i] === event.senderId) {
-                    window.player.idleSenders_.splice(i, 1);
-                    break;
-                }
-            }
-        }
-        */
-
 
 
         //If last sender explicity disconnects, turn off
@@ -703,24 +653,7 @@
 
         /** check if visible and pause media if not - add a timer to tear down after a period of time
          if visibilty does not change back **/
-        /*
-        if (event.data) { // It is visible
-            //window.mediaElement.play(); // Resume media playback
 
-            window.player.mediaElement_.play();
-
-            window.clearTimeout(window.timeout); // Turn off the timeout
-            window.timeout = null;
-        } else {
-            //window.mediaElement.pause(); // Pause playback
-
-            window.player.mediaElement_.pause();
-
-            window.timeout = window.setTimeout(function(){
-                window.close();
-            }, (10 * 60 * 1000)); // 10 Minute timeout
-        }
-        */
     }
 
     /**
@@ -966,15 +899,7 @@
     window.mediaManager.onStop = function(event) {
         console.log("### Media Manager - STOP: " + JSON.stringify(event));
         //setHudMessage('mediaManagerMessage', 'STOP: ' + JSON.stringify(event));
-        /*
-        var self = window.player;
-        window.player.fadeOut_(self.element_, 0.75, function() {
-            self.mediaElement_.pause();
-            self.mediaElement_.removeAttribute('src');
-            self.setState_(sampleplayer.State.DONE, false);
-            window.player.fadeIn_(self.element_, 0.75);
-        });
-        */
+
         var self = window.player;
         self.mediaElement_.pause();
         self.mediaElement_.removeAttribute('src');
@@ -1035,19 +960,6 @@
         var contentType = sampleplayer.getValue_(event.data, ['media', 'contentType']); //mimetype & livestream
         var streamType = event.data.media.streamType;
 
-        /*
-        if(contentType.indexOf('livestream') == 0) {
-            if (window.mediaPlayer !== null) {
-
-                window.mediaPlayer.unload();
-
-
-            }
-            mediaManager.resetMediaElement(cast.receiver.media.IdleReason.ERROR);
-            window.mediaManager.sendLoadError();
-            return;
-        }
-        */
 
         self.setContentType_(contentType);
 
@@ -1076,11 +988,7 @@
             if (window.player.videoType_ == sampleplayer.videoType.HLS) {
 
                 console.log("Loading HLS stream");
-                /*
-                if (window.mediaPlayer !== null) {
-                    window.mediaPlayer.unload(); // Ensure unload before loading again
-                }
-                */
+
 
 
                 window.mediaHost = new cast.player.api.Host({
@@ -1150,45 +1058,6 @@
                         window.mediaPlayer.load(protocol, Number.POSITIVE_INFINITY);
                         //window.mediaPlayer.load(protocol, initialTimeIndexSeconds);
 
-
-
-                        //if (window.mediaPlayer !== null) {
-
-
-
-
-                        //}
-
-                        //window.mediaManager.sendLoadError();
-                        //window.mediaPlayer.unload();
-                        //mediaManager.resetMediaElement(cast.receiver.media.IdleReason.ERROR);
-                        //return;
-
-                            /*
-                         if (window.mediaPlayer !== null) {
-                             window.mediaManager.sendLoadError();
-                             window.mediaPlayer.unload();
-                             mediaManager.resetMediaElement(cast.receiver.media.IdleReason.ERROR);
-
-
-
-                             window.player.setState_(sampleplayer.State.DONE, false);
-                             return;
-
-
-                         }
-                         */
-
-                        //window.mediaManager.sendLoadError();
-                        //window.mediaPlayer.unload();
-                        //mediaManager.resetMediaElement(cast.receiver.media.IdleReason.ERROR);
-                        //window.player.setState_(sampleplayer.State.DONE, false);
-
-
-                        //if(contentType.indexOf('livestream') == 0) {
-
-                            //return;
-                        //}
                     } else {
                         console.log('####### Casting VOD');
                         window.mediaPlayer.load(protocol, initialTimeIndexSeconds);
