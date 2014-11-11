@@ -226,7 +226,6 @@
 
     /** Parses json object and pushes it to the idle media object array */
     sampleplayer.parseJson_ = function(json) {
-        //debugger;
         var teasersArray = json._embedded.teasers;
         data = [];
         $.each(teasersArray, function(i, teaser ) {
@@ -557,8 +556,8 @@
      **/
 
 
-    //cast.receiver.logger.setLevelValue(cast.receiver.LoggerLevel.DEBUG);
-    //cast.player.api.setLoggerLevel(cast.player.api.LoggerLevel.DEBUG);
+    cast.receiver.logger.setLevelValue(cast.receiver.LoggerLevel.DEBUG);
+    cast.player.api.setLoggerLevel(cast.player.api.LoggerLevel.DEBUG);
 
     window.castReceiverManager = cast.receiver.CastReceiverManager.getInstance();
 
