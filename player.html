@@ -1383,7 +1383,7 @@
 
     });
     window.mediaElement.addEventListener('suspend', function(e){
-        console.log("######### MEDIA ELEMENT SUSPEND " + e);
+        //console.log("######### MEDIA ELEMENT SUSPEND " + e);
         //setHudMessage('mediaElementState','Suspended');
 
         //The user agent is intentionally not currently fetching media data. (but can be playing)
@@ -1427,7 +1427,7 @@
 
     /** Progress bar */
     window.mediaElement.addEventListener('timeupdate', function(e) {
-        console.log("######### MEDIA ELEMENT timeupdate ");
+        //console.log("######### MEDIA ELEMENT timeupdate ");
 
         var curTime = window.player.mediaElement_.currentTime;
         var totalTime = window.player.mediaElement_.duration;
