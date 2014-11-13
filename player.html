@@ -1356,8 +1356,13 @@
         //setHudMessage('mediaElementState','Stalled');
         //Not used with media player library
 
-        window.player.setState_(sampleplayer.State.STALLED, false);
-        showBufferUI();
+        if (window.player.videoType_ == sampleplayer.videoType.HLS) {
+
+            console.log("##### HLS Stream Stalled");
+
+            window.player.setState_(sampleplayer.State.STALLED, false);
+            showBufferUI();
+        }
     });
 
     window.mediaElement.addEventListener('progress', function(e){
