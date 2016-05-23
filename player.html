@@ -202,16 +202,13 @@
 
 
 
-                    $.getJSON('http://www.br.de/system/halTocJson.jsp', function(json) {
+                    $.getJSON('https://www.br.de/system/halTocJson.jsp', function(json) {
 
                         var tocURL = json.medcc.version["1"].href;
-                        console.log('TOC url:' + tocURL);
 
                         $.getJSON(tocURL, function(json) {
 
                             var startpageURL = json._links.home.href;
-
-                            console.log('Startpage url:' + startpageURL);
 
                             $.getJSON(startpageURL, function(json) {
 
